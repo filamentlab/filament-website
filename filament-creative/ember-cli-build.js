@@ -3,6 +3,13 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
+
+    // Load styles from the Origin directory
+    sassOptions: {
+      includePaths: [
+        '_/scss/'
+      ]
+    }
     // Add options here
   });
 
