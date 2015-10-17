@@ -1,0 +1,69 @@
+//----------------------------------------------------------------
+//	Internet Explorer 8 / Opera Mini Support
+//----------------------------------------------------------------
+// Change to "true" if you wish to support IE8 and Opera Mini. This
+// will add pixel support to measurements. You may need to use 
+// additional polyfills for IE8, such as respond.js and/or HTML5 Shiv
+$pxSupport: 			"false";  
+
+
+//----------------------------------------------------------------
+//	Grid Variables
+//----------------------------------------------------------------
+// * Values are in pixels for the sake of ease, but everything will 
+//   output in rem's. There will be pixel values added too, as a 
+//   fallback if $pxSupport is set to 'true'.
+$rowWidth: 				1240; 	// * 
+$columnGutter: 			50;		// *
+$totalColumns: 			12;
+
+$defaultFloat: 			left;
+$oppositeDirection: 	right;
+
+// Screen Size Name: 	"kick-in" size;
+$smallScreen:			640;
+$mediumScreen:			768;
+$largeScreen: 			1024;
+
+
+//----------------------------------------------------------------
+//	Colors
+//----------------------------------------------------------------
+$titleColor: 			#424D57;
+$bodyColor: 			#777;
+
+$black: 				#000;
+$white: 				#fff;
+
+$charcoalLight:         #626D76;
+$charcoal:              #4A5762;
+$charcoalDark:          #424D57;
+$charcoalDarker:        #424242;
+
+$beigeLight:            #F0EFEB;
+$beige:                 #EEEDE9;
+$beigeDark:             #D5D3CF;
+
+$blueGreyLight:         #EDF3F9;
+$blueGrey:              #EBF2F9;
+$blueGreyDark:          #D3D8DD;
+
+$redLight:              #D5385D;
+$red:                   #CF1A45;
+$redDark:               #B9173D;
+
+$yellowLight:           #E7D97F;
+$yellow:                #E4D46C;
+$yellowDark:            #CCBD60;
+
+$tealLight:             #3AA6A5;
+$teal:                  #1C9998;
+$tealDark:              #198887;
+
+$greenLight:            #4FA968;
+$green:                 #359C51;
+$greenDark:             #2F8B48;
+
+$forestLight:           #226363;
+$forest:                #004C4C;
+$forestDark:            #004343;

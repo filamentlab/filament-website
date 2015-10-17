@@ -1,0 +1,33 @@
+/*
+Theme Name: 	Filament Creative Inc.
+Theme URI: 		http://www.filamentlab.com
+Version: 		3.0
+Author: 		Filament Creative Inc.
+*/
+
+// BASE STYLES
+// ---------------------------------------------------------
+@import "base/_variables.scss";
+@import "base/_mixins.scss";
+@import "base/_reset.scss";
+@import "base/_typography.scss";
+@import "base/_grid.scss";
+@import "base/_common.scss";
+@import "base/_forms.scss";
+@import "base/_buttons.scss";
+
+
+// VENDOR 
+// ---------------------------------------------------------
+//@import "vendor/_third-party-stylesheets-go-here.scss";
+
+
+// MODULES
+// ---------------------------------------------------------
+@import "modules/_header.scss";
+@import "modules/_footer.scss";
+
+
+// REGIONS
+// ---------------------------------------------------------
+@import "regions/_homepage.scss";

@@ -1,0 +1,187 @@
+// ==========================================================================
+// Web Fonts
+// ==========================================================================
+@include font(AvenirNext, avenirnext-reg);
+@include font(AvenirNextMed, avenirnext-med);
+@include font(AvenirNextDemi, avenirnext-demi);
+@include font(AvenirNextBold, avenirnext-bold);
+@font-face { 
+    font-family: 'FreightTextBook'; 
+        src: url('_/fonts/freighttext-reg/2E2C4B_0_0.eot'); 
+        src: url('_/fonts/freighttext-reg/2E2C4B_0_0.eot?#iefix') format('embedded-opentype'),
+             url('_/fonts/freighttext-reg/2E2C4B_0_0.woff2') format('woff2'),
+             url('_/fonts/freighttext-reg/2E2C4B_0_0.woff') format('woff'),
+             url('_/fonts/freighttext-reg/2E2C4B_0_0.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'FreightTextLt'; 
+        src: url('_/fonts/freighttext-lt/2E2C4B_1_0.eot');
+        src: url('_/fonts/freighttext-lt/2E2C4B_1_0.eot?#iefix') format('embedded-opentype'),
+             url('_/fonts/freighttext-lt/2E2C4B_1_0.woff2') format('woff2'),
+             url('_/fonts/freighttext-lt/2E2C4B_1_0.woff') format('woff'),
+             url('_/fonts/freighttext-lt/2E2C4B_1_0.ttf') format('truetype');
+}
+
+
+//----------------------------------------------------------------
+//  Titles
+//----------------------------------------------------------------
+h1, h2, h3, h4, h5, h6,
+.alpha, .beta, .gamma, .delta, .epsilon, .zeta {
+	font-weight: normal;
+}
+
+h1, h2, h3, 
+.alpha, .beta, .gamma {
+    font-family: 'FreightTextLt';
+    line-height: 1.1;
+}
+
+h1, 
+.alpha {
+    color: $charcoalDarker;
+    @include fontSize(55);
+    text-transform: none;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        @include fontSize(65);
+    }
+
+    @media only screen and (min-width: $largeScreen + px) {
+        @include fontSize(70);
+    }
+}
+
+h2, 
+.beta {
+    @include fontSize(45);
+    text-transform: none;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        @include fontSize(52);
+    }
+    
+    @media only screen and (min-width: $largeScreen + px) {
+        @include fontSize(56);
+    }
+}
+
+h3, 
+.gamma {
+    @include fontSize(30);
+    text-transform: none;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        @include fontSize(34);
+    }
+    
+    @media only screen and (min-width: $largeScreen + px) {
+        @include fontSize(36);
+    }
+}
+
+h4, 
+.delta {
+    font-family: 'AvenirNextDemi';
+    @include fontSize(18);
+    @include prop(letter-spacing, 2);
+    text-transform: uppercase;
+    line-height: 1.4;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        @include fontSize(21);
+    }
+    
+    @media only screen and (min-width: $largeScreen + px) {
+        @include fontSize(22);
+    }
+}
+
+h5, 
+.epsilon {
+    font-family: 'AvenirNextDemi';
+    @include fontSize(16);
+    @include prop(letter-spacing, 2);
+    text-transform: uppercase;
+    line-height: 1.4;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        @include fontSize(18);
+    }
+}
+
+h6, 
+.zeta {
+}
+
+//----------------------------------------------------------------
+//  General Typography
+//----------------------------------------------------------------
+p,
+ul,
+ol,
+address,
+code, 
+kbd, 
+pre, 
+samp {
+    @include prop(margin-bottom, 30);
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+nav ul {
+    margin-bottom: 0;
+}
+
+i,
+em,
+address {
+    font-style: normal;
+}
+
+b,
+strong {
+    font-weight: normal;
+    font-family: "AvenirNextMed";
+}
+
+p {
+}
+
+p,
+li {
+    @include fontSize(16);
+    font-family: 'AvenirNext';
+	color: $bodyColor;
+    line-height: 1.8;
+
+	&.punch {
+
+	}
+}
+
+ol,
+ul {
+    
+    li {
+
+    }
+}
+
+ul {
+
+    li {
+
+    }
+}
+
+ol {
+
+    li {
+
+    }
+}

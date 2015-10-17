@@ -1,0 +1,27 @@
+.button,
+button,
+input[type="submit"] {
+	@include prop(padding, 10, 35);
+	@include fontSize(11);
+	font-family: "AvenirNextDemi";
+	display: inline-block;
+	line-height: 1;
+	text-transform: uppercase;
+	cursor: pointer;
+	outline: none;
+	border: 1px solid transparent;
+
+	&.border-red,
+	&.border-tealLight,
+	&.border-green,
+	&.border-forestDark {
+		color: $black;
+	}
+
+	&.bg-red,
+	&.bg-tealLight,
+	&.bg-green,
+	&.bg-forestDark {
+		color: rgba(255,255,255,0.7);
+	}
+}
