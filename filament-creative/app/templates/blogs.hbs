@@ -1,19 +1,25 @@
-<ul>
-  {{#link-to 'first-blog-title'}}
-    <li>
-      <strong>First Blog Title</strong><br>
-      <em>by</em><br>
-      Trevor Davson
-    </li>
-  {{/link-to}}
+<section>
+  <div class="row">
+    <div class="columns xsmall-12">
+      <ul>
+        {{#link-to 'first-blog-title'}}
+          <li>
+            <strong>First Blog Title</strong><br>
+            <em>by</em><br>
+            Trevor Davson
+          </li>
+        {{/link-to}}
 
-  {{#link-to 'second-blog-title'}}
-    <li>
-      <strong>Second Blog Title</strong><br>
-      <em>by</em><br>
-      Lindsay Trevors
-    </li>
-  {{/link-to}}
-</ul>
+        {{#link-to 'second-blog-title'}}
+          <li>
+            <strong>Second Blog Title</strong><br>
+            <em>by</em><br>
+            Lindsay Trevors
+          </li>
+        {{/link-to}}
+      </ul>
+    </div>
+  </div>
+</section>
 
 {{outlet}}
