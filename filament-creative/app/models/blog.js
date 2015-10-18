@@ -25,5 +25,3 @@ DS.Model.extend({
 //         }
 //     ]
 // });
-
-export default Blog;
