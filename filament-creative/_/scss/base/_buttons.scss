@@ -1,7 +1,7 @@
 .button,
 button,
 input[type="submit"] {
-	@include prop(padding, 10, 35);
+	@include prop(padding, 10, 35, 8);
 	@include fontSize(11);
 	font-family: "AvenirNextDemi";
 	display: inline-block;
@@ -22,6 +22,66 @@ input[type="submit"] {
 	&.bg-tealLight,
 	&.bg-green,
 	&.bg-forestDark {
+		transition: background-color 0.3s ease, color 0.3s ease;
 		color: rgba(255,255,255,0.7);
+
+		&:hover {
+			color: rgba(255, 255, 255, 1);
+		}
 	}
+
+	&.bg-red {
+		background-color: $red;
+
+		&:hover {
+			background-color: $redLight;
+		}
+	}
+
+	&.bg-tealLight {
+		background-color: $tealLight;
+
+		&:hover {
+			background-color: $tealDark;
+		}
+	}
+
+	&.bg-green {
+		background-color: $green;
+
+		&:hover {
+			background-color: $greenLight;
+		}
+	}
+
+	&.bg-forestDark {
+		background-color: $forestDark;
+
+		&:hover {
+			background-color: $forestLight;
+		}
+	}
+
+	// May not be used - temporary styling
+	// &.border-expand {
+	// 	position: relative;
+
+	// 	&:after {
+	// 		transition: left 0.3s ease;
+	// 		border: 1px solid $red;
+	// 		position: absolute;
+	// 		content: '';
+	// 		left: 100%;
+	// 		bottom: 0;
+	// 		right: 0;
+	// 		top: 0;
+	// 	}
+
+	// 	&:hover {
+
+	// 		&:after {
+	// 			left: 0;
+	// 		}
+	// 	}
+	// }
 }
