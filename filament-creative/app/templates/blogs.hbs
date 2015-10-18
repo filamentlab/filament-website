@@ -1,13 +1,48 @@
-<section>
+<section class="blog-landing">
     <div class="row">
-        <div class="columns xsmall-12">
-            {{!-- <ul>
-                {{#each model as |blog|}}
-                    <li>
-                        {{blog.title}}
-                    </li>
-                {{/each}}
-            </ul> --}}
+        <div class="post-list columns xsmall-6">
+            <ul>
+                <li>
+                {{#link-to 'blog-first'}}
+                    <h5 class="tags">#Project Management | #Process</h5>
+                    <h2>Thinking About Thinking</h2>
+                    <p class="intro">Memory Techniques, Mental Organization, &amp; Better Project Management</p>
+                    
+                    <div class="meta">
+                        <div class="image-wrap circle">
+                            <img src="/assets/images/trev-test.jpg" alt="">
+                        </div>
+
+                        <h5>By Trevor Davson</h5>
+                        <span class="spacer"></span>
+                        <h5>Sept 9 2015</h5>
+                    </div>
+                {{/link-to}}
+                </li>
+
+                <li>
+                {{#link-to 'blog-second'}}
+                    <h5 class="tags">#UX | #Gaming</h5>
+                    <h2>UX Critique: StreetPass Mii Plaza</h2>
+                    <p class="intro">I genuinely get a thrill of excitement when I spot someone else on the bus playing their 3DS, instantly followed by a sense of tedious obligation-induced dread. Here’s why.</p>
+                    
+                    <div class="meta">
+                        <div class="image-wrap circle">
+                            <img src="/assets/images/trev-test.jpg" alt="">
+                        </div>
+
+                        <h5>By Lindsay Trevors</h5>
+                        <span class="spacer"></span>
+                        <h5>Sept 9 2015</h5>
+                    </div>
+                {{/link-to}}
+                </li>
+            </ul>
+        </div>
+        <div class="post-image columns xsmall-6">
+            <div class="image-wrap">
+                <img src="/assets/images/hero-trev-blog.jpg" alt="">
+            </div>
         </div>
     </div>
 </section>

@@ -1,6 +1,6 @@
 import DS from 'ember-data';
 
-DS.Model.extend({
+export default DS.Model.extend({
   title: DS.attr('string'),
   punchCopy: DS.attr('string'),
   author: DS.attr('string'),
