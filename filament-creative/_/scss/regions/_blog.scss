@@ -1,0 +1,47 @@
+.blog-landing {
+    @include prop(padding, 100, 0);
+
+    .post-list {
+        padding-right: 0;
+    }
+    .post-image {
+        padding-left: 0;
+    }
+
+    li {
+        border-bottom: 1px solid $blueGreyDark;
+        padding: 70px 100px 20px 0;
+    }
+
+    .tags {
+        margin-bottom: 10px;
+        color: $yellowDark;
+        font-size: 11px;
+    }
+
+    h2 {
+        margin-bottom: 20px;
+        color: $titleColor;
+    }
+
+    .meta {
+        @include prop(padding, 4, 0, 0, 55);
+        position: relative;
+
+        .image-wrap {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+
+        h5 {
+            display: inline-block;
+            color: $titleColor;
+            font-size: 11px;
+
+            &:first-of-type {
+                color: $yellowDark;
+            }
+        }
+    }
+}
