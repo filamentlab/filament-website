@@ -1,27 +1,20 @@
-<section>
+<header class="global">
     <div class="row">
-        <div class="columns xsmall-12 text-center">
-            <h3 clas="gamma">Header will go here</h3>
-        </div>
-    </div>
-</section>
+        <div class="columns xsmall-12 main-nav">
+            <div class="filament-logo">
+                {{#link-to "index" class="icon-filament-logo"}}<span class="hidden">Filament Creative Inc.</span>{{/link-to}}
+            </div>
 
-<section>
-    <div class="row">
-        <div class="columns xsmall-12 text-center">
-            {{#link-to 'index'}}
-                <h1>New Filament Creative Website</h1>
-            {{/link-to}}
+            <nav class="header-nav">
+                <ul>
+                    <li>{{#link-to "get-in-touch"}}Get In Touch{{/link-to}}</li>
+                    <li>{{#link-to "work"}}Work{{/link-to}}</li>
+                    <li>{{#link-to "about"}}About{{/link-to}}</li>
+                    <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
+                </ul>
+            </nav>
         </div>
     </div>
-</section>
+</header>
 
 {{outlet}}
-
-<section>
-    <div class="row">
-        <div class="columns xsmall-12 text-center">
-            <h3 clas="gamma">Footer will go here</h3>
-        </div>
-    </div>
-</section>

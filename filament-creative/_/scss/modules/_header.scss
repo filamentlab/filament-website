@@ -1,3 +1,76 @@
 header.global {
-	
+    .row {
+        @include pre(max-width, 100%);
+    }
+
+    .columns {
+        @include prop(padding, 0);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .filament-logo,
+    .header-nav {
+        display: inline-block;
+    }
+
+    .icon-filament-logo {
+        background-color: $green;
+        display: inline-block;
+        position: relative;
+        height: 100px;
+        width: 100px;
+        right: 4px;
+
+        &:before {
+            position: absolute;
+            margin-left: -18px;
+            margin-top: -18px;
+            font-size: 36px;
+            color: $white;
+            left: 50%;
+            top: 50%;
+
+            @media only screen and (min-width: $smallScreen + px) {
+                font-size: 42px;
+                margin-left: -21px;
+                margin-top: -21px;
+            }
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                font-size: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+            }
+        }
+
+        @media only screen and (min-width: $smallScreen + px) {
+            height: 120px;
+            width: 120px;    
+        }
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            height: 180px;
+            width: 180px;
+        }
+    }
+
+    .header-nav {
+        float: right;
+        text-align: right;
+        @include prop(padding, 20, 30, 0);
+        text-transform: uppercase;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            @include prop(padding, 60, 70, 0);
+        }
+
+        a {
+            font-family: 'AvenirNextMed';
+            @include fontSize(13);
+            letter-spacing: 1px;
+            line-height: 2.4;
+            color: $titleColor;
+        }
+    }	
 }
