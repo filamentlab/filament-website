@@ -6,6 +6,7 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+    this.route('index', {path: '/'})
     this.route('blogs', {path: '/blog'});
     this.route('blog-first', {path: '/blog/first-blog'});
     this.route('blog-second', {path: '/blog/second-blog'});
