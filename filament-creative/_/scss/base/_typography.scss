@@ -226,6 +226,9 @@ ol {
     }
 }
 
+.icon-active-nav:before {
+    content: "\e802";
+}
 .icon-arrow-right:before {
     content: "\e800";
 }

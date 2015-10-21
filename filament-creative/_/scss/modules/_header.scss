@@ -71,6 +71,21 @@ header.global {
             letter-spacing: 1px;
             line-height: 2.4;
             color: $titleColor;
+            position: relative;
+
+            &.active {
+                @extend .icon-active-nav;
+
+                &:before {
+                    font-family: 'iconfont';
+                    border-radius: 50%;
+                    font-size: 10px;
+                    color: $green;
+                    position: absolute;
+                    left: -20px;
+                    top: -5px;
+                }
+            }
         }
     }	
 }
