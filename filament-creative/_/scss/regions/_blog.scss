@@ -45,35 +45,40 @@
         margin-bottom: 20px;
         color: $titleColor;
     }
+}
 
-    .meta {
-        @include prop(padding, 4, 0, 0, 55);
-        position: relative;
+.meta {
+    @include prop(padding, 4, 0, 0, 55);
+    position: relative;
 
-        .image-wrap {
-            position: absolute;
-            left: 0;
-            top: 0;
-        }
+    .image-wrap {
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        left: 0;
+        top: 0;
+    }
 
-        h5 {
-            display: inline-block;
-            color: $titleColor;
-            font-size: 11px;
+    h5 {
+        display: inline-block;
+        color: $titleColor;
+        font-size: 11px;
 
-            &:first-of-type {
-                color: $yellowDark;
-            }
+        &:first-of-type {
+            color: $yellowDark;
         }
     }
 }
 
-
-
 .blog-single {
+    border-bottom: 1px solid $blueGreyDark;
 
     &.first .row {
         background: url('/assets/images/hero-trev-blog.jpg') bottom right no-repeat;
+    }
+
+    .masthead {
+        padding: 100px 0 140px;
     }
 
     .tags {
@@ -81,9 +86,38 @@
         color: $yellowDark;
         font-size: 11px;
     }
+
+    .meta {
+        padding: 15px 0 0 65px;
+    }
+
+    .image-wrap {
+        height: 50px;
+        width: 50px;
+
+        img {
+            width: 100%;
+        }
+    }
 }
 
+.content {
+    padding: 70px 0;
 
+    .break {
+        @include radius(8);
+        border: 3px solid $blue;
+        display: inline-block;
+        margin-bottom: 40px;
+        margin-top: 10px;
+        height: 16px;
+        width: 16px;
+    }
+
+    h3, h5 {
+        margin-bottom: 30px;
+    }
+}
 
 
 
