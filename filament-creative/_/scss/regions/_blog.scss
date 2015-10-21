@@ -9,8 +9,30 @@
     }
 
     li {
-        border-bottom: 1px solid $blueGreyDark;
-        padding: 70px 100px 20px 0;
+        padding: 70px 100px 40px 0;
+        position: relative;
+
+        &:after {
+            @include trans(right 0.3s ease);
+            background-color: $blueGreyDark;
+            position: absolute;
+            content: '';
+            bottom: 0;
+            left: 0;
+            height: 1px;
+            right: 100px;
+        }
+
+        a {
+            display: block;
+        }
+
+        &:hover {
+
+            &:after {
+                right: 0;
+            }
+        }
     }
 
     .tags {
@@ -45,3 +67,23 @@
         }
     }
 }
+
+
+
+.blog-single {
+
+    &.first .row {
+        background: url('/assets/images/hero-trev-blog.jpg') bottom right no-repeat;
+    }
+
+    .tags {
+        margin-bottom: 10px;
+        color: $yellowDark;
+        font-size: 11px;
+    }
+}
+
+
+
+
+

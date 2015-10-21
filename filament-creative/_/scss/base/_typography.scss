@@ -164,11 +164,23 @@ li {
 	color: $bodyColor;
     line-height: 1.8;
 
-	&.intro {
+	&.intro-lg {
+        @include fontSize(28);
+        font-family: 'FreightTextLt';
+        line-height: 1.5;
+	}
+
+    &.intro-med {
+        @include fontSize(20);
+        font-family: 'FreightTextLt';
+        line-height: 1.5;
+    }
+
+    &.intro-sm {
         @include fontSize(18);
         font-family: 'FreightTextLt';
         line-height: 1.4;
-	}
+    }
 
     a {
         color: $redLight;
