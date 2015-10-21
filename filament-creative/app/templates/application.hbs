@@ -1,16 +1,21 @@
-<section>
+<header class="global">
     <div class="row">
-        <div class="columns xsmall-12 text-center">
-            {{#link-to 'index'}}
-                <h1>New Filament Creative Website</h1>
-            {{/link-to}}
-        </div>
+        <div class="columns xsmall-12 main-nav">
+            <div class="filament-logo">
+                {{#link-to "index" class="icon-filament-logo"}}<span class="hidden">Filament Creative Inc.</span>{{/link-to}}
+            </div>
 
-        <a href="/" class="button bg-red">Sample Button</a>
-        <a href="/" class="button bg-tealLight">Sample Button</a>
-        <a href="/" class="button bg-green">Sample Button</a>
-        <a href="/" class="button bg-forestDark">Sample Button</a>
+            <nav class="header-nav">
+                <ul>
+                    <li>{{#link-to "get-in-touch"}}Get In Touch{{/link-to}}</li>
+                    <li>{{#link-to "work"}}Work{{/link-to}}</li>
+                    <li>{{#link-to "about"}}About{{/link-to}}</li>
+                    <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
+                    <li>{{#link-to "style-guide"}}Style Guide{{/link-to}}</li>
+                </ul>
+            </nav>
+        </div>
     </div>
-</section>
+</header>
 
 {{outlet}}
