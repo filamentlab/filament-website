@@ -1,4 +1,7 @@
 header.global {
+    position: relative;
+    z-index: 2;
+
     .row {
         @include pre(max-width, 100%);
     }
