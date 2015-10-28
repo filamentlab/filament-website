@@ -1,3 +1,7 @@
+.post-list {
+    @include prop(padding, 150, 0, 0, 50);
+}
+
 .blog-landing {
     @include prop(padding, 0);
     background-color: $white;
@@ -6,13 +10,10 @@
         max-width: 100%;
     }
 
-    &.active {
-        transform: scale(0.5);
-    }
+    // &.active {
+    //     transform: scale(0.5);
+    // }
 
-    .post-list {
-        @include prop(padding, 150, 0, 0, 50);
-    }
     .post-image {
         @include prop(padding, 0);
 
@@ -86,7 +87,12 @@
 .blog-single {
     border-bottom: 1px solid $blueGreyDark;
 
-    &.first .row {
+    .row {
+        max-width: 100%;
+    }
+
+    &.first .row,
+    &.second .row {
         background: url('/assets/images/hero-trev-blog.jpg') bottom right no-repeat;
     }
 
