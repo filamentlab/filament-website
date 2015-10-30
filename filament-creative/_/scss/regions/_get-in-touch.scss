@@ -1,0 +1,45 @@
+.get-in-touch {
+    background-color: $green;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+
+    header.global {
+        
+        .icon-filament-logo {
+            background-color: transparent;
+        }
+
+        .header-nav {
+            a {
+                color: $white;
+
+                &.active {
+                    &:before {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+
+    .get-in-touch-form {
+        position: relative;
+        @include prop(padding, 0, 0, 0, 0);
+        @include prop(top, 65);
+
+        .beta {
+            color: $white;
+            position: relative;
+            z-index: 4;
+        }
+
+        form {
+            margin: 0 auto;
+
+            input {
+                display: block;
+            }
+        }
+    }
+}
