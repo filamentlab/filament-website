@@ -63,6 +63,7 @@ h2,
 .beta {
     @include fontSize(45);
     text-transform: none;
+    color: $titleColor;
 
     @media only screen and (min-width: $mediumScreen + px) {
         @include fontSize(52);
@@ -75,15 +76,18 @@ h2,
 
 h3, 
 .gamma {
-    @include fontSize(30);
+    @include fontSize(24);
     text-transform: none;
+    color: $titleColor;
 
     @media only screen and (min-width: $mediumScreen + px) {
-        @include fontSize(34);
+        @include fontSize(28);
     }
-    
-    @media only screen and (min-width: $largeScreen + px) {
-        @include fontSize(36);
+
+    &.sm {
+        font-family: 'FreightTextBook';
+        @include fontSize(20);
+        color: $white;
     }
 }
 
@@ -93,32 +97,36 @@ h4,
     @include fontSize(18);
     @include prop(letter-spacing, 2);
     text-transform: uppercase;
-    line-height: 1.4;
+    color: $charcoalLight;
+    line-height: 1.5;
 
-    @media only screen and (min-width: $mediumScreen + px) {
-        @include fontSize(21);
+    &.white {
+        color: $white;
     }
-    
-    @media only screen and (min-width: $largeScreen + px) {
-        @include fontSize(22);
+
+    &.pink {
+        color: $pinkDark;
     }
 }
 
 h5, 
 .epsilon {
-    font-family: 'AvenirNextDemi';
-    @include fontSize(16);
+    font-family: 'AvenirNextBold';
+    @include fontSize(15);
     @include prop(letter-spacing, 2);
     text-transform: uppercase;
-    line-height: 1.4;
-
-    @media only screen and (min-width: $mediumScreen + px) {
-        @include fontSize(18);
-    }
+    color: $charcoalLight;
+    line-height: 1.9;
 }
 
 h6, 
 .zeta {
+    @include prop(letter-spacing, 1);
+    font-family: 'AvenirNextBold';
+    text-transform: uppercase;
+    @include fontSize(11);
+    color: $titleColor;
+    line-height: 1.5;
 }
 
 //----------------------------------------------------------------
@@ -163,35 +171,46 @@ li {
     @include fontSize(16);
     font-family: 'AvenirNext';
 	color: $bodyColor;
-    line-height: 1.8;
+    line-height: 1.6;
+    @include prop(margin-bottom, 15);
 
-	&.intro-lg {
-        @include fontSize(28);
+    &.intro-lg {
         font-family: 'FreightTextLt';
-        line-height: 1.5;
-	}
+        @include fontSize(28);
+        line-height: 1.4;
+    }
 
     &.intro-med {
-        @include fontSize(20);
         font-family: 'FreightTextLt';
+        @include fontSize(20);
         line-height: 1.5;
     }
 
     &.intro-sm {
-        @include fontSize(18);
         font-family: 'FreightTextLt';
-        line-height: 1.4;
+        @include fontSize(18);
+        line-height: 1.5;
+    }
+
+    span.number-sm {
+        font-family: 'AvenirNextDemi';
+        @include fontSize(35);
+        line-height: 1.3;
+    }
+
+    span.number-lg {
+        @include prop(letter-spacing, -4);
+        font-family: 'AvenirNextDemi';
+        @include fontSize(120);
+        line-height: 1.3;
     }
 
     a {
         color: $redLight;
         transition: box-shadow 0.3s ease;
-        // box-shadow: 0 2px 0 transparent;
-        // box-shadow: 0 0.2rem 0 transparent;
 
         &:hover {
-            // box-shadow: 0 2px 0 $redDark;
-            // box-shadow: 0 0.2rem 0 $redDark;
+
         }
     }
 }
@@ -208,6 +227,27 @@ ul {
 
     li {
 
+    }
+
+    &.bulleted {
+        padding-left: 25px;
+
+        li {
+            position: relative;
+            padding-left: 25px;
+            line-height: 1.8;
+
+            &:before {
+                @include radius(3);
+                background-color: $charcoalLight;
+                position: absolute;
+                content: '';
+                height: 6px;
+                width: 6px;
+                top: 10px;
+                left: 0;
+            }
+        }
     }
 }
 
