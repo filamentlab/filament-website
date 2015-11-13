@@ -65,7 +65,7 @@ header.global {
         text-transform: uppercase;
 
         @media only screen and (min-width: $mediumScreen + px) {
-            @include prop(padding, 60, 70, 0);
+            @include prop(padding, 40, 70, 0);
         }
 
         a {
