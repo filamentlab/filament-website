@@ -21,19 +21,19 @@
         <div class="columns xsmall-12 medium-7 column-right">
             <div class="contact-form-header">
                 <h2 class="beta">Got a Project?</h2>
-                <button class="icon-close" {{action "show_get_in_touch"}}>Close</button>
+                <button class="icon-close" {{action "close_get_in_touch"}}>Close</button>
             </div>
 
             <form action="http://campaigns.filamentlab.com/t/y/s/zutjtt/" method="post" id="subForm">
                 <div class="row">
-                    <div class="columns xsmall-12 large-7">
+                    <div class="columns xsmall-12 medium-6">
                         <p>
                             <label for="fieldName">Name</label><br />
                             <input {{action "input_field_in_focus"}} id="fieldName" name="cm-name" type="text" />
                         </p>
                     </div>
 
-                    <div class="columns xsmall-12 large-5">
+                    <div class="columns xsmall-12 medium-6">
                         <p>
                             <label for="fieldasxr">Phone number</label><br />
                             <input {{action "input_field_in_focus"}} id="fieldasxr" name="cm-f-asxr" type="text" />
@@ -42,14 +42,14 @@
                 </div>
 
                 <div class="row">
-                    <div class="columns xsmall-12 large-7">
+                    <div class="columns xsmall-12 large-6">
                         <p>
                             <label for="fieldEmail">Email Address</label><br />
                             <input {{action "input_field_in_focus"}} id="fieldEmail" name="cm-zutjtt-zutjtt" type="email" required />
                         </p>
                     </div>
 
-                    <div class="columns xsmall-12 large-5">
+                    <div class="columns xsmall-12 large-6">
                         <p>
                             <label for="fieldasxj">Budget</label><br />
                             <select {{action "select_field_in_focus"}} id="fieldasxj" name="cm-fo-asxj">
@@ -64,18 +64,20 @@
                 </div>
 
                 <div class="row">
-                    <div class="columns xsmall-12 large-7">
+                    <div class="columns xsmall-12 large-6">
                         <p>
                             <label for="fieldasxt">Project Type</label><br />
                             <select {{action "select_field_in_focus"}} id="fieldasxt" name="cm-fo-asxt">
-                                <option value=""></option>
-                                <option value="983078">Website</option>
-                                <option value="983079">Application</option>
+                                <optgroup>
+                                    <option value=""></option>
+                                    <option value="983078">Website</option>
+                                    <option value="983079">Application</option>
+                                </optgroup>
                             </select>
                         </p>
                     </div>
 
-                    <div class="columns xsmall-12 large-5">
+                    <div class="columns xsmall-12 large-6">
                         <p>
                             <label for="fieldasxi">Deadline</label><br />
                             <select {{action "select_field_in_focus"}} id="fieldasxi" name="cm-fo-asxi">

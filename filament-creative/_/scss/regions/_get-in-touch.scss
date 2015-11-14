@@ -6,7 +6,16 @@
     top: 0;
     left: 0;
     overflow: visible;
-    display: none;
+    z-index: 0;
+
+    &.active {
+        z-index: 1;
+
+        .contact-form-header {
+            position: relative;
+            z-index: 3;
+        }
+    }
 
     @media only screen and (min-width: $mediumScreen + px) {
         overflow: hidden;
@@ -24,12 +33,12 @@
     .address,
     .tel,
     .email {
-        @include prop(padding, 40, 0);
+        @include prop(padding, 30, 0);
     }
 
     .gamma {
         color: $white;
-        @include prop(margin-bottom, 30);
+        @include prop(margin-bottom, 20);
 
         &.sm {
             @include prop(margin, 0);
@@ -69,10 +78,7 @@
 
     .column-right {
         @include prop(padding-top, 65);
-        // @include prop(padding-right, 180);
-        background: $greenDark;
+        background: #33944E;
         height: 100%;
-        position: relative;
-        z-index: 3;
     }
 }

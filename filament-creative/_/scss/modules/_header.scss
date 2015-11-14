@@ -1,6 +1,5 @@
 header.global {
     position: relative;
-    z-index: 2;
 
     // .row {
     //     @include pre(max-width, 100%);
@@ -14,7 +13,9 @@ header.global {
 
     .filament-logo,
     .header-nav {
+        position: relative;
         display: inline-block;
+        z-index: 1;
     }
 
     .icon-filament-logo {

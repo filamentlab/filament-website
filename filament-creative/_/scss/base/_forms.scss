@@ -88,7 +88,10 @@ textarea {
     }
 
     select {
-        border-radius: 0;
+        
+        optgroup {
+            font-size: 14px;
+        }
     }
 
     #fieldasxd {

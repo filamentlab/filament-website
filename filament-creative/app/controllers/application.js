@@ -5,10 +5,16 @@ export default Ember.Controller.extend({
 
     actions: {
         show_get_in_touch: function() {
-            // later, change this so that on a click, liquid-container 
-            // gets a class attached to it that makes it shrink/scale down
-            // to the bottom
-            Ember.$("#get-in-touch").toggle("slow");
+            Ember.$(".liquid-container").addClass('minimize');
+            Ember.$("#get-in-touch").addClass('active');
+            Ember.$('body').css("overflow", "hidden");
+            this.toggleProperty('contactOpen');
+        },
+
+        close_get_in_touch: function() {
+            Ember.$('body').css("overflow", "visible");
+            Ember.$(".liquid-container").removeClass('minimize');
+            Ember.$("#get-in-touch").removeClass('active');
             this.toggleProperty('contactOpen');
         },
 
