@@ -2,10 +2,6 @@ header.global {
     position: relative;
     z-index: 2;
 
-    .row {
-        @include pre(max-width, 100%);
-    }
-
     .columns {
         @include prop(padding, 0);
         position: relative;
