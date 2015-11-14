@@ -11,9 +11,10 @@ Router.map(function() {
     this.route('blog-first', {path: '/blog/first-blog'});
     this.route('blog-second', {path: '/blog/second-blog'});
 
-    this.route('get-in-touch', {path: '/get-in-touch'});
+    // this.route('get-in-touch', {path: '/get-in-touch'});
     this.route('work', {path: '/work'});
     this.route('about', {path: '/about'});
+    this.route('scalar-case-study', {path:'/scalar-case-study'})
 
     this.route('page-not-found', { path: '/*wildcard' });
     this.route('style-guide', { path: '/style-guide' });
