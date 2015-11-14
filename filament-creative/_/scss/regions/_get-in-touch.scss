@@ -2,11 +2,19 @@
     background-color: $green;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
+    overflow: visible;
+    display: none;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        overflow: hidden;
+    }
+
+    .top-row {
+        height: 100%;
+    }
 
     .beta {
         color: $white;
@@ -34,6 +42,25 @@
         }
     }
 
+    .contact-form-header {
+        overflow: hidden;
+        position: relative;
+
+        h2 {
+            float: left;
+        }
+
+        button {
+            float: right;
+            background: transparent;
+        }
+    }
+
+    .column-left,
+    .column-right {
+        height: 100%;
+    }
+
     .column-left {
         background: $green;
         @include prop(padding-left, 180);
@@ -42,15 +69,10 @@
 
     .column-right {
         @include prop(padding-top, 65);
+        // @include prop(padding-right, 180);
         background: $greenDark;
         height: 100%;
-    }
-
-    form {
-        margin: 0 auto;
-
-        input {
-            display: block;
-        }
+        position: relative;
+        z-index: 3;
     }
 }

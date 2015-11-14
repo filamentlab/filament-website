@@ -44,3 +44,72 @@ textarea {
    &:focus {
    }
 }
+
+
+#subForm {
+    position: relative;
+    z-index: 3;
+
+    p {
+        @include prop(padding-bottom, 20);
+    }
+
+    label {
+        position: relative;
+        bottom: -27px;
+        left: 10px;
+        font-family: "AvenirNextBold";
+        @include fontSize(11);
+        color: #CFEAD6;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 1.5;
+        @include trans(left 0.3s ease, bottom 0.3s ease);
+    }
+
+    input,
+    select {
+        background: #387E4B;
+        text-decoration: none;
+        box-shadow: none;
+        border: none;
+        @include prop(height, 33);
+        @include pre(width, 100%);
+        color: #004343;
+        @include fontSize(20);
+        font-family: "FrieghtTextLight";
+        @include trans(background 0.3s ease);
+        @include prop(padding-left, 10);
+
+        &:focus {
+            outline: 0;
+            background: $white;
+        }
+    }
+
+    select {
+        border-radius: 0;
+    }
+
+    #fieldasxd {
+        @extend input;
+        @include prop(height, 120);
+        @include prop(padding, 10);
+        resize: none;
+    }
+
+    .footer {
+        p {
+            overflow: hidden;
+            position: relative;
+        }
+
+        button {
+            float: right;
+            font-family: "AvenirNextBold";
+            @include fontSize(11);
+            color: #CFEAD6;
+            letter-spacing: 1px;
+        }
+    }
+}
