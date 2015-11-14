@@ -1,30 +1,30 @@
 .post-list {
-    @include prop(padding, 150, 0, 0, 50);
+    padding-top: 150px;
 }
 
 .blog-landing {
     @include prop(padding, 0);
     background-color: $white;
 
-    .row {
-        max-width: 100%;
-    }
-
-    // &.active {
-    //     transform: scale(0.5);
-    // }
-
-    .post-image {
-        @include prop(padding, 0);
-
-        img {
-            width: 100%;
-        }
+    ul {
+        background-color: #ddd;
     }
 
     li {
-        padding: 70px 100px 40px 0;
+        padding: 70px 20px 40px 0;
+        background-color: #fff;
         position: relative;
+        margin-bottom: 0;
+        width: 70%;
+
+        @media only screen and (min-width: $smallScreen + px ) {
+            padding: 70px 50px 40px 0;
+        } 
+
+        @media only screen and (min-width: $largeScreen + px ) {
+            padding: 70px 100px 40px 0;
+            width: 50%;
+        }
 
         &:after {
             @include trans(right 0.3s ease);
@@ -86,18 +86,23 @@
 
 .blog-single {
     border-bottom: 1px solid $blueGreyDark;
+    background: url('/assets/images/hero-trev-blog.jpg') center top no-repeat;
+    background-size: 100% auto;
 
-    .row {
-        max-width: 100%;
-    }
-
-    &.first .row,
-    &.second .row {
+    @media only screen and (min-width: $largeScreen + px) {
         background: url('/assets/images/hero-trev-blog.jpg') bottom right no-repeat;
+        background-size: initial;
     }
 
     .masthead {
         padding: 100px 0 140px;
+
+        .intro-lg {
+        
+            @media only screen and (min-width: $largeScreen + px) {
+                padding-right: 40px;
+            }
+        }
     }
 
     .tags {
