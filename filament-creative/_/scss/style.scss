@@ -19,7 +19,7 @@ Author: 		Filament Creative Inc.
 
 // VENDOR 
 // ---------------------------------------------------------
-//@import "vendor/_third-party-stylesheets-go-here.scss";
+@import "vendor/_icon-font.scss";
 
 
 // MODULES
@@ -30,6 +30,7 @@ Author: 		Filament Creative Inc.
 
 // REGIONS
 // ---------------------------------------------------------
-@import "regions/_blog.scss";
 @import "regions/_homepage.scss";
+@import "regions/_blog.scss";
 @import "regions/_get-in-touch.scss";
+@import "regions/_case-study-scalar.scss";
