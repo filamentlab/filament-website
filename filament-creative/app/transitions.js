@@ -1,9 +1,9 @@
 export default function(){  
-    this.transition(
-        this.toRoute(['index', 'about', 'work', 'blogs', 'blog-first', 'blog-second', 'style-guide']),
-        this.use('toLeft', {duration: 300}),
-        this.debug()
-    );
+    // this.transition(
+    //     this.toRoute(['index', 'about', 'work', 'blogs', 'blog-first', 'blog-second', 'style-guide']),
+    //     this.use('toLeft', {duration: 300}),
+    //     this.debug()
+    // );
 
     this.transition(
         // --------------------- BLOG to BLOG-SINGLE ----------------------------------- //

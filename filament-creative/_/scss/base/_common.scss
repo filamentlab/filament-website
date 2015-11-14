@@ -131,6 +131,7 @@ embed {
     position: absolute;
     @include pre(width, 100%);
     @include pre(top, 0);
+    @include pre(left, 0);
 }
 
 //----------------------------------------------------------------
@@ -205,3 +206,18 @@ section {
 @include borderColor("tealLight", $tealLight);
 @include borderColor("green", $green);
 @include borderColor("forestDark", $forestDark);
+
+.br-greenLightest {
+    position: relative;
+    
+    &:before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 80%;
+        height: 1px;
+        background: $greenLightest;
+    }
+}

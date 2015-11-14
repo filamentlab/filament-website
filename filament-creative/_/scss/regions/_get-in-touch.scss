@@ -1,45 +1,56 @@
-.get-in-touch {
+#get-in-touch {
     background-color: $green;
     height: 100%;
     width: 100%;
     overflow: hidden;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
 
-    header.global {
-        
-        .icon-filament-logo {
-            background-color: transparent;
+    .beta {
+        color: $white;
+        @include prop(margin-bottom, 10);
+    }
+
+    .address,
+    .tel,
+    .email {
+        @include prop(padding, 40, 0);
+    }
+
+    .gamma {
+        color: $white;
+        @include prop(margin-bottom, 30);
+
+        &.sm {
+            @include prop(margin, 0);
+            line-height: 1.5;
         }
 
-        .header-nav {
-            a {
-                color: $white;
-
-                &.active {
-                    &:before {
-                        color: $white;
-                    }
-                }
-            }
+        a {
+            color: $white;
+            text-decoration: none;
         }
     }
 
-    .get-in-touch-form {
-        position: relative;
-        @include prop(padding, 0, 0, 0, 0);
-        @include prop(top, 65);
+    .column-left {
+        background: $green;
+        @include prop(padding-left, 180);
+        @include prop(padding-top, 65);
+    }
 
-        .beta {
-            color: $white;
-            position: relative;
-            z-index: 4;
-        }
+    .column-right {
+        @include prop(padding-top, 65);
+        background: $greenDark;
+        height: 100%;
+    }
 
-        form {
-            margin: 0 auto;
+    form {
+        margin: 0 auto;
 
-            input {
-                display: block;
-            }
+        input {
+            display: block;
         }
     }
 }
