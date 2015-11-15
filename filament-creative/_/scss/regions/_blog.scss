@@ -1,7 +1,5 @@
-.blog-landing {
-    @include prop(padding, 0);
-    background-color: $white;
-    height: 100vh;
+.container {
+    overflow: scroll;
 
     .bg {
         background: url('/assets/images/hero-trev-blog.jpg') bottom center no-repeat;
@@ -13,15 +11,34 @@
         left: 0;
         top: 0;
     }
+}
+
+.blog-landing {
+    @include prop(padding, 0);
+    background-color: $white;
+    height: 100vh;
+
+    .blog-list {
+        padding: 0 0 0 10px;
+        background: #fff;
+
+        @media only screen and (min-width: $smallScreen + px ) {
+            padding: 0 0 0 20px;
+        }
+
+        @media only screen and (min-width: $mediumScreen + px ) {
+            padding: 170px 0 0 25px;
+        }
+    }
 
     li {
-        padding: 70px 20px 40px 0;
+        padding: 20px 0 60px 0;
         background-color: #fff;
         position: relative;
         margin-bottom: 0;
 
         &:after {
-            @include trans(right 0.3s ease);
+            @include trans(left 0.3s ease);
             background-color: $blueGreyDark;
             position: absolute;
             content: '';
@@ -31,46 +48,56 @@
             right: 0;
         }
 
-        // &:hover {
-
-        //     &:after {
-        //         right: 0;
-        //     }
-        // }
-
         @media only screen and (min-width: $smallScreen + px ) {
             padding: 70px 50px 40px 0;
         } 
 
+        @media only screen and (min-width: $mediumScreen + px ) {
+
+            &:hover {
+
+                &:after {
+                    left: -50px;
+                }
+            }            
+        } 
+
         @media only screen and (min-width: $largeScreen + px ) {
-            padding: 70px 100px 40px 0;
+            padding: 70px 70px 40px 0;
         }
 
-        a {
+        a.ember-view {
             display: block;
         }
-    }
-
-    .tags {
-        margin-bottom: 10px;
-        color: $yellowDark;
-        font-size: 11px;
     }
 
     h2 {
         margin-bottom: 20px;
         color: $titleColor;
+
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 26px;
+        }
+    }
+
+    .intro-sm {
+
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 12px;
+        }   
     }
 }
 
 .meta {
-    @include prop(padding, 4, 0, 0, 55);
+    padding: 0 0 0 30px;
+    display: inline-block;
     position: relative;
+    line-height: 1;
 
     .image-wrap {
         position: absolute;
-        height: 40px;
-        width: 40px;
+        height: 20px;
+        width: 20px;
         left: 0;
         top: 0;
     }
@@ -78,10 +105,34 @@
     h5 {
         display: inline-block;
         color: $titleColor;
-        font-size: 11px;
+        font-size: 9px;
 
         &:first-of-type {
             color: $yellowDark;
+        }
+    }
+
+    .spacer {
+        margin: 0 6px;
+    }
+
+    @media only screen and (min-width: $smallScreen + px) {
+        padding: 15px 0 0 65px;
+
+        h5 {
+            font-size: 11px;
+        }
+
+        .spacer {
+            margin: 0 10px;
+        }
+
+        .image-wrap {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            left: 0;
+            top: 0;
         }
     }
 }
@@ -157,43 +208,6 @@
 
         @media only screen and (min-width: $largeScreen + px) {
             padding-right: 75px;
-        }
-    }
-
-    .meta {
-        padding: 0 0 0 30px;
-        display: inline-block;
-
-        .image-wrap {
-            position: absolute;
-            height: 20px;
-            width: 20px;
-            left: 0;
-            top: 0;
-        }
-
-        h5 {
-            font-size: 9px;
-        }
-
-        .spacer {
-            margin: 0 6px;
-        }
-
-        @media only screen and (min-width: $smallScreen + px) {
-            padding: 12px 0 0 65px;
-
-            h5 {
-                font-size: initial;
-            }
-
-            .image-wrap {
-                position: absolute;
-                height: 50px;
-                width: 50px;
-                left: 0;
-                top: 0;
-            }
         }
     }
 }
