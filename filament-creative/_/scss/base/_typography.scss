@@ -226,7 +226,11 @@ a.tag {
     margin: 0px 10px 10px 0px;
     color: $yellowDark;
     @include radius(3);
-    font-size: 11px;
+    font-size: 9px;
+
+    @media only screen and (min-width: $smallScreen + px ) {
+        font-size: 11px;        
+    }
 }
 
 ol,
