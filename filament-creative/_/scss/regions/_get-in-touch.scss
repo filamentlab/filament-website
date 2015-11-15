@@ -48,6 +48,27 @@
         a {
             color: $white;
             text-decoration: none;
+            border-bottom: 1px solid $white;
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                border-bottom: 0px solid $white;
+            }
+        }
+    }
+
+    .directions-tag {
+        color: $white;
+        background: transparent;
+        @include fontSize(9);
+        border: 1px solid $greenLightest;
+        border-radius: 2px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        padding: 5px 10px;
+        display: inline-block;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            display: none;
         }
     }
 
@@ -62,23 +83,80 @@
         button {
             float: right;
             background: transparent;
+            display: none;
+            color: $white;
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                display: inline-block;
+            }
+        }
+    }
+
+    .mobile-contact-form-header {
+        position: relative;
+
+        h2 {
+            display: inline-block;
+        }
+
+        button {
+            position: absolute;
+            top: -40px;
+            right: -15px;
+            background: transparent;
+            display: block;
+            color: $white;
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                display: none;
+            }
         }
     }
 
     .column-left,
     .column-right {
-        height: 100%;
+        height: initial;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            height: 100%;
+        }
     }
 
     .column-left {
         background: $green;
-        @include prop(padding-left, 180);
-        @include prop(padding-top, 65);
+        padding: 0 20px;
+        padding-top: 75px;
+        text-align: center;
+
+        @media only screen and (min-width: $smallScreen + px) {
+
+        }
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            padding-left: 100px;
+            text-align: left;
+            padding-top: 40px;
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-left: 140px;
+            padding-top: 65px;
+        }
     }
 
     .column-right {
-        @include prop(padding-top, 65);
         background: #33944E;
-        height: 100%;
+        padding-top: 40px;
+
+        @media only screen and (min-width: $smallScreen + px) {
+        }
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-top: 65px;
+        }        
     }
 }

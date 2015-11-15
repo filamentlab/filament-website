@@ -15,7 +15,7 @@ header.global {
     }
 
     .icon-filament-logo {
-        background-color: $green;
+        // background-color: $green;
         display: inline-block;
         position: relative;
         height: 100px;
@@ -44,12 +44,12 @@ header.global {
             }
         }
 
-        @media only screen and (min-width: $smallScreen + px) {
+        @media only screen and (min-width: $mediumScreen + px) {
             height: 120px;
             width: 120px;    
         }
 
-        @media only screen and (min-width: $mediumScreen + px) {
+        @media only screen and (min-width: $largeScreen + px) {
             height: 180px;
             width: 180px;
         }

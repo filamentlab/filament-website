@@ -56,15 +56,25 @@ textarea {
 
     label {
         position: relative;
-        bottom: -27px;
-        left: 10px;
         font-family: "AvenirNextBold";
         @include fontSize(11);
         color: #CFEAD6;
         text-transform: uppercase;
         letter-spacing: 1px;
         line-height: 1.5;
+        bottom: 5px;
+        left: 0px;
         @include trans(left 0.3s ease, bottom 0.3s ease);
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            bottom: -27px;
+            left: 10px;
+        }
+
+        // &.field-in-focus {
+        //     left: 0;
+        //     bottom: 0;
+        // }
     }
 
     input,
@@ -88,10 +98,21 @@ textarea {
     }
 
     select {
-        
-        optgroup {
-            font-size: 14px;
-        }
+        // ::-webkit-input-placeholder {
+        //    color: red;
+        // }
+
+        // :-moz-placeholder { /* Firefox 18- */
+        //    color: red;  
+        // }
+
+        // ::-moz-placeholder {  /* Firefox 19+ */
+        //    color: red;  
+        // }
+
+        // :-ms-input-placeholder {  
+        //    color: red;  
+        // }
     }
 
     #fieldasxd {
@@ -113,6 +134,11 @@ textarea {
             @include fontSize(11);
             color: #CFEAD6;
             letter-spacing: 1px;
+            width: 100%;
+
+            @media only screen and (min-width: $smallScreen + px) {
+                width: initial;
+            }
         }
     }
 }
