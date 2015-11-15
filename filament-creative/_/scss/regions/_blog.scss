@@ -140,11 +140,11 @@
 //----------------------------------------------------------------
 //  Single blog Styling
 //----------------------------------------------------------------
-
 .blog-single {
     overflow: hidden;
     position: relative;
     padding: 230px 0 30px;
+    background-color: $white;
 
     @media only screen and (min-width: $mediumScreen + px) {
         padding: 170px 0 100px;

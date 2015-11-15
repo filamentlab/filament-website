@@ -3,7 +3,8 @@ button,
 input[type="submit"] {
 	@include prop(padding, 10, 35, 8);
 	@include fontSize(11);
-	font-family: "AvenirNextDemi";
+	letter-spacing: 1px;
+	font-family: "AvenirNextBold";
 	display: inline-block;
 	line-height: 1;
 	text-transform: uppercase;

@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
     contactOpen: true,
+    // fieldInFocus: false,
 
     actions: {
         show_get_in_touch: function() {
@@ -21,22 +22,25 @@ export default Ember.Controller.extend({
         input_field_in_focus: function() {
             Ember.$('input:focus').siblings().css({
                 "left": "0",
-                "bottom": "0"
+                "bottom": "5px"
             });
+            // this.toggleProperty('fieldInFocus');
         },
 
         select_field_in_focus: function() {
             Ember.$('select:focus').siblings().css({
                 "left": "0",
-                "bottom": "0"
+                "bottom": "5px"
             });
+            // this.toggleProperty('fieldInFocus');
         },
 
         textarea_in_focus: function() {
             Ember.$('textarea:focus').siblings().css({
                 "left": "0",
-                "bottom": "0"
+                "bottom": "5px"
             });
+            // this.toggleProperty('fieldInFocus');
         },
     }
 });
