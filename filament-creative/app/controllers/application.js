@@ -8,7 +8,7 @@ export default Ember.Controller.extend({
         show_get_in_touch: function() {
             Ember.$(".liquid-container").addClass('minimize');
             Ember.$("#get-in-touch").addClass('active');
-            // Ember.$('body').css("overflow", "hidden");
+            Ember.$('body').css("overflow", "hidden");
             this.toggleProperty('contactOpen');
         },
 
