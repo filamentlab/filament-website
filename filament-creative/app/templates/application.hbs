@@ -1,6 +1,6 @@
 <section id="get-in-touch">
-    <div class="row">
-        <div class="columns xsmall-12 medium-6 column-left">
+    <div class="row top-row">
+        <div class="columns xsmall-12 medium-5 column-left">
             <h2 class="beta">Talk to us.</h2>
             <div class="address br-greenLightest">
                 <h3 class="gamma">Filament Creative Inc.</h3>
@@ -18,12 +18,95 @@
                 <p>social icons go here</p>
             </div>
         </div>
-        <div class="columns xsmall-12 medium-6 column-right">
-            <h2 class="beta">Got a Project?</h2>
-            <form class="">
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
+        <div class="columns xsmall-12 medium-7 column-right">
+            <div class="contact-form-header">
+                <h2 class="beta">Got a Project?</h2>
+                <button class="icon-close" {{action "close_get_in_touch"}}>Close</button>
+            </div>
+
+            <form action="http://campaigns.filamentlab.com/t/y/s/zutjtt/" method="post" id="subForm">
+                <div class="row">
+                    <div class="columns xsmall-12 medium-6">
+                        <p>
+                            <label for="fieldName">Name</label><br />
+                            <input {{action "input_field_in_focus"}} id="fieldName" name="cm-name" type="text" />
+                        </p>
+                    </div>
+
+                    <div class="columns xsmall-12 medium-6">
+                        <p>
+                            <label for="fieldasxr">Phone number</label><br />
+                            <input {{action "input_field_in_focus"}} id="fieldasxr" name="cm-f-asxr" type="text" />
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="columns xsmall-12 large-6">
+                        <p>
+                            <label for="fieldEmail">Email Address</label><br />
+                            <input {{action "input_field_in_focus"}} id="fieldEmail" name="cm-zutjtt-zutjtt" type="email" required />
+                        </p>
+                    </div>
+
+                    <div class="columns xsmall-12 large-6">
+                        <p>
+                            <label for="fieldasxj">Budget</label><br />
+                            <select {{action "select_field_in_focus"}} id="fieldasxj" name="cm-fo-asxj">
+                                <option value=""></option>
+                                <option value="983074">0 - 10,000</option>
+                                <option value="983075">10,001 - 50,000</option>
+                                <option value="983076">50,001 - 200,000</option>
+                                <option value="983077">200,000 +</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="columns xsmall-12 large-6">
+                        <p>
+                            <label for="fieldasxt">Project Type</label><br />
+                            <select {{action "select_field_in_focus"}} id="fieldasxt" name="cm-fo-asxt">
+                                <optgroup>
+                                    <option value=""></option>
+                                    <option value="983078">Website</option>
+                                    <option value="983079">Application</option>
+                                </optgroup>
+                            </select>
+                        </p>
+                    </div>
+
+                    <div class="columns xsmall-12 large-6">
+                        <p>
+                            <label for="fieldasxi">Deadline</label><br />
+                            <select {{action "select_field_in_focus"}} id="fieldasxi" name="cm-fo-asxi">
+                                <option value=""></option>
+                                <option value="983080">Within 3 months</option>
+                                <option value="983081">Within 6 months</option>
+                                <option value="983082">Sometime this year</option>
+                            </select>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="columns xsmall-12">
+                        <p>
+                            <label for="fieldasxd">Comments</label><br />
+                            <textarea {{action "textarea_in_focus"}} id="fieldasxd" name="cm-f-asxd" rows="10"></textarea>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row footer">
+                    <div class="columns xsmall-12">
+                        <p>
+                            <button  class="bg-forestDark" type="submit">Let's Go</button>
+                        </p>                    
+                    </div>
+                </div>
+                
             </form>
         </div>
     </div>
@@ -38,11 +121,13 @@
 
             <nav class="header-nav">
                 <ul>
-                    <li><button {{action "show_get_in_touch"}}>Get In Touch</button></li>
-                    <li>{{#link-to "work"}}Work{{/link-to}}</li>
-                    <li>{{#link-to "about"}}About{{/link-to}}</li>
-                    <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
-                    <li>{{#link-to "style-guide"}}Style Guide{{/link-to}}</li>
+                    {{#if contactOpen}}
+                        <li><button {{action "show_get_in_touch"}}>Get In Touch</button></li>
+                        <li>{{#link-to "work"}}Work{{/link-to}}</li>
+                        <li>{{#link-to "about"}}About{{/link-to}}</li>
+                        <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
+                        <li>{{#link-to "style-guide"}}Style Guide{{/link-to}}</li>
+                    {{/if}}
                 </ul>
             </nav>
         </div>

@@ -132,6 +132,15 @@ embed {
     @include pre(width, 100%);
     @include pre(top, 0);
     @include pre(left, 0);
+    @include trans(transform 0.6s ease-out, top 0.6s ease-out);
+
+    &.minimize {
+        overflow: hidden;
+        transform: scale(0.5);
+        @include pre(top, 40%);
+        z-index: 1;
+        box-shadow: 10px 14px 50px 0px rgba(0,0,0,0.4);
+    }
 }
 
 //----------------------------------------------------------------

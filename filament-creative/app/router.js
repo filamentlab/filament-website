@@ -14,7 +14,7 @@ Router.map(function() {
     // this.route('get-in-touch', {path: '/get-in-touch'});
     this.route('work', {path: '/work'});
     this.route('about', {path: '/about'});
-    this.route('scalar-case-study', {path:'/scalar-case-study'})
+    this.route('scalar-case-study', {path:'/scalar-case-study'});
 
     this.route('page-not-found', { path: '/*wildcard' });
     this.route('style-guide', { path: '/style-guide' });

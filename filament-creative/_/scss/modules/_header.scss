@@ -1,6 +1,5 @@
 header.global {
     position: relative;
-    z-index: 2;
 
     .columns {
         @include prop(padding, 0);
@@ -10,7 +9,9 @@ header.global {
 
     .filament-logo,
     .header-nav {
+        position: relative;
         display: inline-block;
+        z-index: 1;
     }
 
     .icon-filament-logo {
