@@ -8,12 +8,12 @@ export default Ember.Controller.extend({
         show_get_in_touch: function() {
             Ember.$(".liquid-container").addClass('minimize');
             Ember.$("#get-in-touch").addClass('active');
-            Ember.$('body').css("overflow", "hidden");
+            Ember.$('body').addClass("get-in-touch-active");
             this.toggleProperty('contactOpen');
         },
 
         close_get_in_touch: function() {
-            Ember.$('body').css("overflow", "visible");
+            Ember.$('body').removeClass("get-in-touch-active");
             Ember.$(".liquid-container").removeClass('minimize');
             Ember.$("#get-in-touch").removeClass('active');
             this.toggleProperty('contactOpen');

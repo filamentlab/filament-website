@@ -28,6 +28,11 @@
     .beta {
         color: $white;
         @include prop(margin-bottom, 10);
+        text-align: center;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            text-align: left;
+        }
     }
 
     .address,
@@ -75,21 +80,6 @@
     .contact-form-header {
         overflow: hidden;
         position: relative;
-
-        h2 {
-            float: left;
-        }
-
-        button {
-            float: right;
-            background: transparent;
-            display: none;
-            color: $white;
-
-            @media only screen and (min-width: $mediumScreen + px) {
-                display: inline-block;
-            }
-        }
     }
 
     .mobile-contact-form-header {
@@ -101,7 +91,7 @@
 
         button {
             position: absolute;
-            top: -40px;
+            top: -30px;
             right: -15px;
             background: transparent;
             display: block;
@@ -134,8 +124,8 @@
 
         @media only screen and (min-width: $mediumScreen + px) {
             padding-left: 100px;
-            text-align: left;
             padding-top: 40px;
+            text-align: left;
         }
 
         @media only screen and (min-width: $largeScreen + px) {
@@ -148,15 +138,8 @@
         background: #33944E;
         padding-top: 40px;
 
-        @media only screen and (min-width: $smallScreen + px) {
-        }
-
-        @media only screen and (min-width: $mediumScreen + px) {
-            
-        }
-
         @media only screen and (min-width: $largeScreen + px) {
             padding-top: 65px;
-        }        
+        }
     }
 }

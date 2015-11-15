@@ -54,6 +54,22 @@ embed {
     max-width: 100%;
 }
 
+body {
+    overflow: hidden;
+
+    &.blog-first,
+    &.blog-second {
+        overflow: visible;
+    }
+
+    &.get-in-touch-active {
+        overflow: visible;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            overflow: hidden;
+        }
+    }
+}
 
 //----------------------------------------------------------------
 //  Helper Classes
@@ -158,6 +174,7 @@ embed {
     @include pre(left, 0);
     @include trans(transform 0.6s ease-out, top 0.6s ease-out);
     background: $white;
+    margin-top: 40px;
 
     &.minimize {
         overflow: hidden;
@@ -170,6 +187,10 @@ embed {
             transform: scale(0.7);
             @include pre(top, 60%);
         }
+    }
+
+    @media only screen and (min-width: $smallScreen + px) {
+        margin-top: 0;
     }
 }
 

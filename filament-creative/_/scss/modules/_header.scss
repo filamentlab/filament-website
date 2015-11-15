@@ -2,7 +2,10 @@ header.global {
     position: relative;
     background: #fff;
     height: 40px;
-    z-index: 1;
+
+    @media only screen and (max-width: ($smallScreen - 1) + px) {
+        z-index: 1;
+    }
 
     @media only screen and (min-width: $smallScreen + px ) {
         background: transparent;
@@ -13,13 +16,14 @@ header.global {
     .columns {
         @include prop(padding, 0);
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     .filament-logo,
     .header-nav {
         position: relative;
         display: inline-block;
+        z-index: 1;
     }
 
     .icon-filament-logo {
@@ -34,7 +38,7 @@ header.global {
         }
 
         @media only screen and (min-width: $smallScreen + px) {
-            background-color: $green;
+            // background-color: $green;
             display: inline-block;
             height: 120px;
             width: 120px;
@@ -91,6 +95,34 @@ header.global {
                 display: block;
                 width: initial;
             }
+
+            button {
+                @extend a;
+                text-decoration: none;
+                font-family: 'AvenirNextBold';
+                @include fontSize(11);
+                letter-spacing: 1px;
+                position: relative;
+                line-height: 2.4;
+                color: $green;
+
+                @media only screen and (min-width: $smallScreen + px) {
+                    font-family: 'AvenirNextMed';
+                    @include fontSize(13);
+                    color: $titleColor;
+                }
+            }
+
+            &.close-btn {
+                float: right;
+                position: relative;
+                right: 30px;
+
+                @media only screen and (min-width: $smallScreen + px) {
+                    float: inherit;
+                    right: 0;
+                }
+            }            
         }
 
         a {
