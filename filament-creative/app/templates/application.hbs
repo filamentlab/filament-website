@@ -1,52 +1,5 @@
-<section id="get-in-touch">
-    <div class="row">
-        <div class="columns xsmall-12 medium-6 column-left">
-            <h2 class="beta">Talk to us.</h2>
-            <div class="address br-greenLightest">
-                <h3 class="gamma">Filament Creative Inc.</h3>
-                <h3 class="gamma sm">67 Mowat Ave. Suite 433</h3>
-                <h3 class="gamma sm">Toronto ON Canada</h3>
-                <h3 class="gamma sm">M6K 3E3</h3>
-            </div>
-            <div class="tel br-greenLightest">
-                <h3 class="gamma sm">+1 416 588 0550</h3>
-            </div>
-            <div class="email">
-                <h3 class="gamma sm"><a href="mailto:heythere@filamentlab.com">heythere@filamentlab.com</a></h3>
-            </div>
-            <div class="social">
-                <p>social icons go here</p>
-            </div>
-        </div>
-        <div class="columns xsmall-12 medium-6 column-right">
-            <h2 class="beta">Got a Project?</h2>
-            <form class="">
-                <input type="text" />
-                <input type="text" />
-                <input type="text" />
-            </form>
-        </div>
-    </div>
-</section>
+{{partial "get-in-touch"}}
 
-<header class="global">
-    <div class="row">
-        <div class="columns xsmall-12 main-nav">
-            <div class="filament-logo">
-                {{#link-to "index" class="icon-filament-logo"}}<span class="hidden">Filament Creative Inc.</span>{{/link-to}}
-            </div>
-
-            <nav class="header-nav">
-                <ul>
-                    <li><button {{action "show_get_in_touch"}}>Get In Touch</button></li>
-                    <li>{{#link-to "work"}}Work{{/link-to}}</li>
-                    <li>{{#link-to "about"}}About{{/link-to}}</li>
-                    <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
-                    <li>{{#link-to "style-guide"}}Style Guide{{/link-to}}</li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-</header>
+{{partial "header"}}
 
 {{liquid-outlet}}

@@ -1,88 +1,155 @@
 header.global {
     position: relative;
-    z-index: 2;
+    background: #fff;
+    height: 40px;
+
+    @media only screen and (max-width: ($smallScreen - 1) + px) {
+        z-index: 1;
+    }
+
+    @media only screen and (min-width: $smallScreen + px ) {
+        background: transparent;
+        height: initial;
+    }
+    
 
     .columns {
         @include prop(padding, 0);
         position: relative;
-        overflow: hidden;
+        // overflow: hidden;
     }
 
     .filament-logo,
     .header-nav {
+        position: relative;
         display: inline-block;
+        z-index: 1;
     }
 
     .icon-filament-logo {
-        background-color: $green;
         display: inline-block;
         position: relative;
-        height: 100px;
-        width: 100px;
-        right: 4px;
+        left: 15px;
+        top: 8px;
 
         &:before {
-            position: absolute;
-            margin-left: -18px;
-            margin-top: -18px;
-            font-size: 36px;
-            color: $white;
-            left: 50%;
-            top: 50%;
-
-            @media only screen and (min-width: $smallScreen + px) {
-                font-size: 42px;
-                margin-left: -21px;
-                margin-top: -21px;
-            }
-
-            @media only screen and (min-width: $mediumScreen + px) {
-                font-size: 50px;
-                margin-left: -25px;
-                margin-top: -25px;
-            }
+            font-size: 22px;
+            color: $green;
         }
 
         @media only screen and (min-width: $smallScreen + px) {
+            // background-color: $green;
+            display: inline-block;
             height: 120px;
-            width: 120px;    
+            width: 120px;
+            left: initial;
+            top: initial;
+
+            &:before {
+                position: absolute;
+                margin-left: -21px;
+                margin-top: -21px;
+                font-size: 42px;
+                color: $white;
+                left: 50%;
+                top: 50%;
+            } 
         }
 
-        @media only screen and (min-width: $mediumScreen + px) {
+        @media only screen and (min-width: $largeScreen + px) {
             height: 180px;
             width: 180px;
+
+            &:before {
+                font-size: 50px;
+                margin-left: -25px;
+                margin-top: -25px;
+            } 
         }
     }
 
     .header-nav {
-        float: right;
-        text-align: right;
-        @include prop(padding, 20, 30, 0);
         text-transform: uppercase;
+        text-align: center;
+        padding-top: 8px;
+        float: right;
+        width: 85%;
 
-        @media only screen and (min-width: $mediumScreen + px) {
-            @include prop(padding, 40, 70, 0);
+        @media only screen and (min-width: $smallScreen + px) {
+            @include prop(padding, 20, 25, 0, 0);
+            text-align: right;
+            width: initial;
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            @include prop(padding, 40, 50, 0, 0);
+        }
+
+        li {
+            display: inline-block;
+            margin-bottom: 0;
+            line-height: 1;
+            width: 23%;
+
+            @media only screen and (min-width: $smallScreen + px) {
+                display: block;
+                width: initial;
+            }
+
+            button {
+                @extend a;
+                text-decoration: none;
+                font-family: 'AvenirNextBold';
+                @include fontSize(11);
+                letter-spacing: 1px;
+                position: relative;
+                line-height: 2.4;
+                color: $green;
+
+                @media only screen and (min-width: $smallScreen + px) {
+                    font-family: 'AvenirNextMed';
+                    @include fontSize(13);
+                    color: $titleColor;
+                }
+            }
+
+            &.close-btn {
+                float: right;
+                position: relative;
+                right: 30px;
+
+                @media only screen and (min-width: $smallScreen + px) {
+                    float: inherit;
+                    right: 0;
+                }
+            }            
         }
 
         a {
-            font-family: 'AvenirNextMed';
-            @include fontSize(13);
+            font-family: 'AvenirNextBold';
+            @include fontSize(11);
             letter-spacing: 1px;
-            line-height: 2.4;
-            color: $titleColor;
             position: relative;
+            line-height: 2.4;
+            color: $green;
 
-            &.active {
-                @extend .icon-active-nav;
+            @media only screen and (min-width: $smallScreen + px) {
+                font-family: 'AvenirNextMed';
+                @include fontSize(13);
+                color: $titleColor;
 
-                &:before {
-                    font-family: 'iconfont';
-                    border-radius: 50%;
-                    font-size: 10px;
-                    color: $green;
-                    position: absolute;
-                    left: -20px;
-                    top: -5px;
+                &.active {
+
+                    &:before {
+                        font-family: 'iconfont';
+                        content: "\e802";
+                        border-radius: 50%;
+                        font-size: 10px;
+                        color: $green;
+                        position: absolute;
+                        left: -20px;
+                        top: -5px;
+                    }
                 }
             }
         }

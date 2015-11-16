@@ -216,6 +216,23 @@ li {
     }
 }
 
+a.tag {
+    font-family: "AvenirNextBold";
+    border: 1px solid $yellowDark;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 4px 8px 2px;
+    letter-spacing: 1px;
+    margin: 0px 10px 10px 0px;
+    color: $yellowDark;
+    @include radius(3);
+    font-size: 9px;
+
+    @media only screen and (min-width: $smallScreen + px ) {
+        font-size: 11px;        
+    }
+}
+
 ol,
 ul {
     

@@ -54,6 +54,22 @@ embed {
     max-width: 100%;
 }
 
+body {
+    overflow: hidden;
+
+    &.blog-first,
+    &.blog-second {
+        overflow: visible;
+    }
+
+    &.get-in-touch-active {
+        overflow: visible;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            overflow: hidden;
+        }
+    }
+}
 
 //----------------------------------------------------------------
 //  Helper Classes
@@ -115,6 +131,30 @@ embed {
     width: 6px;
 }
 
+.only-desktop {
+    display: none;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        display: block;
+    }
+}
+
+.only-mobile-inline {
+    display: inline-block;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        display: none;
+    }
+}
+
+.only-mobile {
+    display: block;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        display: none;
+    }
+}
+
 //----------------------------------------------------------------
 //  Hero
 //----------------------------------------------------------------
@@ -132,6 +172,26 @@ embed {
     @include pre(width, 100%);
     @include pre(top, 0);
     @include pre(left, 0);
+    @include trans(transform 0.6s ease-out, top 0.6s ease-out);
+    background: $white;
+    margin-top: 40px;
+
+    &.minimize {
+        overflow: hidden;
+        @include pre(top, 100%);
+        transform: scale(0);
+        z-index: 1;
+        box-shadow: 10px 14px 50px 0px rgba(0,0,0,0.4);
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            transform: scale(0.7);
+            @include pre(top, 60%);
+        }
+    }
+
+    @media only screen and (min-width: $smallScreen + px) {
+        margin-top: 0;
+    }
 }
 
 //----------------------------------------------------------------
@@ -216,8 +276,16 @@ section {
         position: absolute;
         left: 0;
         bottom: 0;
-        width: 80%;
+        width: 100%;
         height: 1px;
         background: $greenLightest;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            width: 80%;
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            width: 80%;
+        }
     }
 }

@@ -2,26 +2,48 @@
     background-color: $green;
     height: 100%;
     width: 100%;
-    overflow: hidden;
-    z-index: 2;
     position: absolute;
     top: 0;
     left: 0;
+    overflow: visible;
+    z-index: 0;
+
+    &.active {
+        z-index: 1;
+
+        .contact-form-header {
+            position: relative;
+            z-index: 3;
+        }
+    }
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        overflow: hidden;
+    }
+
+    .top-row {
+        height: 100%;
+    }
 
     .beta {
         color: $white;
         @include prop(margin-bottom, 10);
+        text-align: center;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            text-align: left;
+        }
     }
 
     .address,
     .tel,
     .email {
-        @include prop(padding, 40, 0);
+        @include prop(padding, 30, 0);
     }
 
     .gamma {
         color: $white;
-        @include prop(margin-bottom, 30);
+        @include prop(margin-bottom, 20);
 
         &.sm {
             @include prop(margin, 0);
@@ -31,26 +53,93 @@
         a {
             color: $white;
             text-decoration: none;
+            border-bottom: 1px solid $white;
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                border-bottom: 0px solid $white;
+            }
+        }
+    }
+
+    .directions-tag {
+        color: $white;
+        background: transparent;
+        @include fontSize(9);
+        border: 1px solid $greenLightest;
+        border-radius: 2px;
+        letter-spacing: 1px;
+        margin-top: 20px;
+        padding: 5px 10px;
+        display: inline-block;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            display: none;
+        }
+    }
+
+    .contact-form-header {
+        overflow: hidden;
+        position: relative;
+    }
+
+    .mobile-contact-form-header {
+        position: relative;
+
+        h2 {
+            display: inline-block;
+        }
+
+        button {
+            position: absolute;
+            top: -30px;
+            right: -15px;
+            background: transparent;
+            display: block;
+            color: $white;
+
+            @media only screen and (min-width: $mediumScreen + px) {
+                display: none;
+            }
+        }
+    }
+
+    .column-left,
+    .column-right {
+        height: initial;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            height: 100%;
         }
     }
 
     .column-left {
         background: $green;
-        @include prop(padding-left, 180);
-        @include prop(padding-top, 65);
+        padding: 0 20px;
+        padding-top: 75px;
+        text-align: center;
+
+        @media only screen and (min-width: $smallScreen + px) {
+
+        }
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            padding-left: 100px;
+            padding-top: 40px;
+            text-align: left;
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-left: 140px;
+            padding-top: 65px;
+        }
     }
 
     .column-right {
-        @include prop(padding-top, 65);
-        background: $greenDark;
-        height: 100%;
-    }
+        background: #33944E;
+        padding-top: 40px;
 
-    form {
-        margin: 0 auto;
-
-        input {
-            display: block;
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-top: 65px;
         }
     }
 }

@@ -1,12 +1,46 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+    contactOpen: true,
+    // fieldInFocus: false,
+
     actions: {
         show_get_in_touch: function() {
-            // later, change this so that on a click, liquid-container 
-            // gets a class attached to it that makes it shrink/scale down
-            // to the bottom
-            Ember.$("#get-in-touch").toggle("slow");
-        }
+            Ember.$(".liquid-container").addClass('minimize');
+            Ember.$("#get-in-touch").addClass('active');
+            Ember.$('body').addClass("get-in-touch-active");
+            this.toggleProperty('contactOpen');
+        },
+
+        close_get_in_touch: function() {
+            Ember.$('body').removeClass("get-in-touch-active");
+            Ember.$(".liquid-container").removeClass('minimize');
+            Ember.$("#get-in-touch").removeClass('active');
+            this.toggleProperty('contactOpen');
+        },
+
+        input_field_in_focus: function() {
+            Ember.$('input:focus').siblings().css({
+                "left": "0",
+                "bottom": "5px"
+            });
+            // this.toggleProperty('fieldInFocus');
+        },
+
+        select_field_in_focus: function() {
+            Ember.$('select:focus').siblings().css({
+                "left": "0",
+                "bottom": "5px"
+            });
+            // this.toggleProperty('fieldInFocus');
+        },
+
+        textarea_in_focus: function() {
+            Ember.$('textarea:focus').siblings().css({
+                "left": "0",
+                "bottom": "5px"
+            });
+            // this.toggleProperty('fieldInFocus');
+        },
     }
 });

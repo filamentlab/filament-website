@@ -1,74 +1,103 @@
-.post-list {
-    padding-top: 150px;
+.container {
+    overflow: scroll;
+
+    .bg {
+        background: url('/assets/images/hero-trev-blog.jpg') bottom center no-repeat;
+        background-size: cover;        
+        position: absolute;
+        height: 100%;
+        width: 50%;
+        bottom: 0;
+        left: 0;
+        top: 0;
+    }
 }
 
 .blog-landing {
     @include prop(padding, 0);
     background-color: $white;
+    height: 100vh;
 
-    ul {
-        background-color: #ddd;
+    .blog-list {
+        padding: 0 0 0 10px;
+        background: #fff;
+
+        @media only screen and (min-width: $smallScreen + px ) {
+            padding: 0 0 0 20px;
+        }
+
+        @media only screen and (min-width: $mediumScreen + px ) {
+            padding: 170px 0 0 25px;
+        }
     }
 
     li {
-        padding: 70px 20px 40px 0;
+        padding: 20px 0 60px 0;
         background-color: #fff;
         position: relative;
         margin-bottom: 0;
-        width: 70%;
-
-        @media only screen and (min-width: $smallScreen + px ) {
-            padding: 70px 50px 40px 0;
-        } 
-
-        @media only screen and (min-width: $largeScreen + px ) {
-            padding: 70px 100px 40px 0;
-            width: 50%;
-        }
 
         &:after {
-            @include trans(right 0.3s ease);
+            @include trans(left 0.3s ease);
             background-color: $blueGreyDark;
             position: absolute;
             content: '';
             bottom: 0;
             left: 0;
             height: 1px;
-            right: 100px;
+            right: 0;
         }
 
-        a {
+        @media only screen and (min-width: $smallScreen + px ) {
+            padding: 70px 50px 40px 0;
+        } 
+
+        @media only screen and (min-width: $mediumScreen + px ) {
+
+            &:hover {
+
+                &:after {
+                    left: -50px;
+                }
+            }            
+        } 
+
+        @media only screen and (min-width: $largeScreen + px ) {
+            padding: 70px 70px 40px 0;
+        }
+
+        a.ember-view {
             display: block;
         }
-
-        &:hover {
-
-            &:after {
-                right: 0;
-            }
-        }
-    }
-
-    .tags {
-        margin-bottom: 10px;
-        color: $yellowDark;
-        font-size: 11px;
     }
 
     h2 {
         margin-bottom: 20px;
         color: $titleColor;
+
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 26px;
+        }
+    }
+
+    .intro-sm {
+
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 12px;
+        }   
     }
 }
 
 .meta {
-    @include prop(padding, 4, 0, 0, 55);
+    padding: 0 0 0 30px;
+    display: inline-block;
     position: relative;
+    line-height: 1;
 
     .image-wrap {
         position: absolute;
-        height: 40px;
-        width: 40px;
+        height: 20px;
+        width: 20px;
         left: 0;
         top: 0;
     }
@@ -76,51 +105,106 @@
     h5 {
         display: inline-block;
         color: $titleColor;
-        font-size: 11px;
+        font-size: 9px;
 
         &:first-of-type {
             color: $yellowDark;
         }
     }
-}
 
-.blog-single {
-    border-bottom: 1px solid $blueGreyDark;
-    background: url('/assets/images/hero-trev-blog.jpg') center top no-repeat;
-    background-size: 100% auto;
-
-    @media only screen and (min-width: $largeScreen + px) {
-        background: url('/assets/images/hero-trev-blog.jpg') bottom right no-repeat;
-        background-size: initial;
+    .spacer {
+        margin: 0 6px;
     }
 
-    .masthead {
-        padding: 100px 0 140px;
+    @media only screen and (min-width: $smallScreen + px) {
+        padding: 15px 0 0 65px;
 
-        .intro-lg {
-        
-            @media only screen and (min-width: $largeScreen + px) {
-                padding-right: 40px;
-            }
+        h5 {
+            font-size: 11px;
+        }
+
+        .spacer {
+            margin: 0 10px;
+        }
+
+        .image-wrap {
+            position: absolute;
+            height: 50px;
+            width: 50px;
+            left: 0;
+            top: 0;
+        }
+    }
+}
+
+//----------------------------------------------------------------
+//  Single blog Styling
+//----------------------------------------------------------------
+.blog-single {
+    overflow: hidden;
+    position: relative;
+    padding: 230px 0 30px;
+    background-color: $white;
+
+    @media only screen and (min-width: $mediumScreen + px) {
+        padding: 170px 0 100px;
+    }
+
+    @media only screen and (min-width: $largeScreen + px) {
+        padding: 200px 0 160px;
+    }
+
+    .bg {
+        background: url('/assets/images/hero-trev-blog.jpg') bottom center no-repeat;
+        background-size: cover;        
+        position: absolute;
+        height: 200px;
+        width: 100%;
+        bottom: 50%;
+        left: 0;
+        top: 0;
+
+        @media only screen and (min-width: $mediumScreen + px ) {
+            height: 100%;
+            width: 50%;
         }
     }
 
-    .tags {
-        margin-bottom: 10px;
-        color: $yellowDark;
-        font-size: 11px;
+    .masthead {
+
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-left: 25px;
+        }
     }
 
-    .meta {
-        padding: 15px 0 0 65px;
+    .tag {
+        margin-bottom: 30px;
+
+        @media only screen and (min-width: $mediumScreen + px) {
+            margin-bottom: 40px;
+        }
     }
 
-    .image-wrap {
-        height: 50px;
-        width: 50px;
+    h1 {
+        margin-bottom: 15px;
 
-        img {
-            width: 100%;
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 34px;    
+        }
+
+        @media only screen and (min-width: $smallScreen + px) {
+            margin-bottom: initial;
+        }
+    }
+
+    .intro-lg {
+
+        @media only screen and (max-width: $smallScreen + px) {
+            font-size: 16px;    
+        }
+
+        @media only screen and (min-width: $largeScreen + px) {
+            padding-right: 75px;
         }
     }
 }
