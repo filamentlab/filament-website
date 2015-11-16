@@ -1,7 +1,510 @@
 //----------------------------------------------------------------
-//  Scalar Colour Variables
-//---------------------------------------------------------------
+//  Hero
+//----------------------------------------------------------------
+#scalar-hero {
+	background: #faa200;
 
-.scalar-intro {
-	background: #000;
+	h1,
+	p {
+		color: #fff;
+	}
+}
+
+
+//----------------------------------------------------------------
+//  Design System
+//----------------------------------------------------------------
+#design-system {
+	display: block;
+	height: 1000px;
+	background: #ccc;
+	position: relative;
+
+	.text-container,
+	img {
+		opacity: 0;
+		position: absolute;
+	}
+}
+
+#colour-bands {
+	display: block;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+
+	li {
+		@extend .clearfix;
+		@include prop(margin-bottom, 5);
+		position: relative;
+		display: block;
+		padding: 0;
+		width: 60%;
+		@include trans(margin 0.5s ease, width 0.5s ease, height 0.5s ease);
+		overflow: hidden;
+
+		span {
+			display: inline-block;
+			float: left;
+		}
+
+		p {
+			position: absolute;
+			top: 0;
+			width: auto;
+			margin: 0;
+			padding: 0;
+			text-align: center;
+			@include fontSize(11);
+			font-family: 'AvenirNextDemi';
+			text-transform: uppercase;
+			@include trans(opacity 0.3s ease);
+			white-space: nowrap;
+		}
+	}
+}
+
+.pink-band,
+.purple-band,
+.blue-band,
+.green-band,
+.slate-band,
+.grey-band,
+.black-band {
+	@include prop(height, 45);
+
+	span {
+		@include prop(height, 45);
+	}
+
+	p {
+		@include prop(height, 45);
+		@include prop(line-height, 45);
+	}
+}
+
+.pink-band,
+.purple-band,
+.blue-band,
+.green-band,
+.slate-band,
+.yellow-band {
+
+	span {
+
+		&:nth-child(1) {
+			width: 5%;
+		}
+
+		&:nth-child(2) {
+			width: 15%;
+		}
+
+		&:nth-child(3) {
+			width: 45%;
+		}
+
+		&:nth-child(4) {
+			width: 20%;
+		}
+
+		&:nth-child(5) {
+			width: 10%;
+		}
+
+		&:nth-child(6) {
+			width: 5%;
+		}
+	}
+
+	p {
+		left: 20%;
+		right: 35%;
+	}
+}
+
+.grey-band,
+.black-band {
+	
+	span {
+
+		&:nth-child(1) {
+			width: 60%;
+		}
+
+		&:nth-child(2) {
+			width: 40%;
+		}
+	}
+
+	p {
+		left: 0;
+		right: 40%;
+	}
+}
+
+.pink-band {
+	@include prop(margin-left, 100);
+
+	span {
+
+		&:nth-child(1) {
+			background: #5c1041;
+		}
+
+		&:nth-child(2) {
+			background: #6e134e;
+		}
+
+		&:nth-child(3) {
+			background: #931968;
+		}
+
+		&:nth-child(4) {
+			background: #9e3c7c;
+		}
+
+		&:nth-child(5) {
+			background: #b36898;
+		}
+
+		&:nth-child(6) {
+			background: #c999b8;
+		}
+	}
+
+	p {
+		color: #c999b8;
+	}
+}
+
+.purple-band {
+	@include prop(margin-left, 150);
+
+	span {
+
+		&:nth-child(1) {
+			background: #41305d;
+		}
+
+		&:nth-child(2) {
+			background: #513e70;
+		}
+
+		&:nth-child(3) {
+			background: #67508c;
+		}
+
+		&:nth-child(4) {
+			background: #8167ab;
+		}
+
+		&:nth-child(5) {
+			background: #a087c9;
+		}
+
+		&:nth-child(6) {
+			background: #b9a7d6;
+		}
+	}
+
+	p {
+		color: #b9a7d6;
+	}
+}
+
+.blue-band {
+	@include prop(margin-left, 400);
+
+	span {
+
+		&:nth-child(1) {
+			background: #1f4765;
+		}
+
+		&:nth-child(2) {
+			background: #25577d;
+		}
+
+		&:nth-child(3) {
+			background: #3273a4;
+		}
+
+		&:nth-child(4) {
+			background: #3c85bd;
+		}
+
+		&:nth-child(5) {
+			background: #80b2d9;
+		}
+
+		&:nth-child(6) {
+			background: #9ac3e3;
+		}
+	}
+
+	p {
+		color: #9ac3e3;
+	}
+}
+
+.green-band {
+	@include prop(margin-left, 250);
+
+	span {
+
+		&:nth-child(1) {
+			background: #548f6e;
+		}
+
+		&:nth-child(2) {
+			background: #62a781;
+		}
+
+		&:nth-child(3) {
+			background: #72c396;
+		}
+
+		&:nth-child(4) {
+			background: #89d9ad;
+		}
+
+		&:nth-child(5) {
+			background: #b3e8cb;
+		}
+
+		&:nth-child(6) {
+			background: #c9f2dc;
+		}
+	}
+
+	p {
+		color: #548f6e;
+	}
+}
+
+.grey-band {
+	@include prop(margin-left, 300);
+
+	span {
+
+		&:nth-child(1) {
+			background: #d8d8d8;
+		}
+
+		&:nth-child(2) {
+			background: #e8e8e8;
+		}
+	}
+
+	p {
+		color: #fff;
+	}
+}
+
+.slate-band {
+	@include prop(margin-left, 230);
+
+	span {
+
+		&:nth-child(1) {
+			background: #384047;
+		}
+
+		&:nth-child(2) {
+			background: #54606b;
+		}
+
+		&:nth-child(3) {
+			background: #657481;
+		}
+
+		&:nth-child(4) {
+			background: #aebbc4;
+		}
+
+		&:nth-child(5) {
+			background: #bfccd6;
+		}
+
+		&:nth-child(6) {
+			background: #d5e0e8;
+		}
+	}
+
+	p {
+		color: #d5e0e8;
+	}
+}
+
+.black-band {
+	@include prop(margin-left, 100);
+
+	span {
+
+		&:nth-child(1) {
+			background: #333333;
+		}
+
+		&:nth-child(2) {
+			background: #434343;
+		}
+	}
+
+	p {
+		color: #949494;
+	}
+}
+
+.yellow-band {
+	@include prop(margin-left, 270);
+	@include prop(height, 100);
+
+	span {
+		@include prop(height, 100);
+	}
+
+	p {
+		@include prop(height, 100);
+		@include prop(line-height, 100);
+	}
+	
+	span {
+
+		&:nth-child(1) {
+			background: #ba6d00;
+		}
+
+		&:nth-child(2) {
+			background: #e68600;
+		}
+
+		&:nth-child(3) {
+			background: #f8a100;
+		}
+
+		&:nth-child(4) {
+			background: #fab43c;
+		}
+
+		&:nth-child(5) {
+			background: #fad79b;
+		}
+
+		&:nth-child(6) {
+			background: #fff4e0;
+		}
+	}
+
+	p {
+		color: #ba6d00;
+	}
+}
+
+// Step 2
+.step-2 {
+}
+
+// Step 3
+.step-3 {
+
+	
+}
+
+// Step 4
+#design-system.step-4 {
+
+	#colour-bands {
+
+		li {
+			@include prop(margin-left, 100);
+			@include prop(width, 70);
+		}
+
+		p {
+			opacity: 0;
+		}
+	}
+
+	img,
+	.text-container {
+		opacity: 1;
+	}
+
+	.text-container {
+		top: 0;
+		left: 33.3%
+	}
+
+	#sketch-infrastructure {
+		top: 300px;
+		left: 33.3%;
+	}
+
+	#sketch-cloud {
+		top: 300px;
+		left: 66.6%;
+	}
+
+	#sketch-security {
+		top: 0;
+		left: 66.6%;
+	}
+}
+
+// Step 5
+#design-system.step-5 {
+
+	img,
+	.text-container {
+		opacity: 1;
+	}
+
+	.text-container {
+		top: 0;
+		left: 33.3%
+	}
+
+	#sketch-infrastructure {
+		top: 300px;
+		left: 0;
+	}
+
+	#sketch-cloud {
+		top: 300px;
+		left: 33.3%;
+	}
+
+	#sketch-security {
+		top: 300px;
+		left: 66.6%;
+	}
+
+	#colour-bands {
+
+		li {
+			margin-left: 0;
+			margin-bottom: 2px;
+			@include prop(width, 4);
+		}
+
+		p {
+			opacity: 0;
+		}
+	}
+
+	.pink-band,
+	.purple-band,
+	.blue-band,
+	.green-band,
+	.slate-band,
+	.grey-band,
+	.black-band {
+		@include prop(height, 12);
+	}
+
+	.yellow-band {
+		@include prop(height, 24);
+	}
 }
