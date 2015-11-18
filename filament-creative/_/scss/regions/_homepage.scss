@@ -10,6 +10,57 @@
         bottom: 0;
         left: 0;
         top: 0;
+
+        .logo-bg {
+            position: absolute;
+            display: inline-block;
+            z-index: 2;
+            background: $blueDark;
+            width: 180px;
+            height: 180px;
+            left: 0;
+            top: 0;
+        }
+
+        .v-wrapper {
+            min-height: 180px;
+        }
+
+        .homepage-announcement {
+            position: absolute;
+            display: inline-block;
+            top: 0;
+            left: 180px;
+            height: 180px;
+            width: 300px;
+            padding: 10px 20px 0;
+            background: $blueDarkest;
+            overflow: hidden;
+
+            .zeta {
+                color: rgba(255, 255, 255, 0.7);
+                margin-bottom: 5px;
+            }
+
+            .gamma {
+                color: $white;
+                margin-bottom: 15px;
+            }
+
+            .view-announcement-item {
+                float: right;
+
+                .icon-arrow-right {
+                    padding: 0 0 0 5px;
+                    background: transparent;
+
+                    &:before {
+                        color: $white;
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
     }
 
     .fitstar-text {
@@ -49,13 +100,15 @@
                 background: $red;
                 width: 30px;
                 height: 30px;
+                padding: 0;
 
                 &:before {
                     position: absolute;
                     font-size: 12px;
                     color: $white;
+                    font-weight: 600;
                     left: 50%;
-                    margin-left: -2px;
+                    margin-left: -3px;
                     top: 50%;
                     margin-top: -6px;
                 }
