@@ -2,16 +2,20 @@
     <div class="row">
         <div class="columns xsmall-12 main-nav">
             <div class="filament-logo">
-                {{#link-to "index" class="icon-filament-logo"}}<span class="hidden">Filament Creative Inc.</span>{{/link-to}}
+                {{#link-to "index" class="icon-filament-logo"}}
+                    <span class="company-name">Filament</span>
+                    <br>
+                    <span class="company-description">A Digital Agency</span>
+                {{/link-to}}
             </div>
 
             <nav class="header-nav">
                 <ul>
                     {{#if contactOpen}}
+                    <li><button class="icon-arrow-right" id="header-get-in-touch" {{action "show_get_in_touch"}}>Get In Touch</button></li>
                         <li>{{#link-to "work"}}Work{{/link-to}}</li>
                         <li>{{#link-to "about"}}About{{/link-to}}</li>
                         <li>{{#link-to "blogs"}}Blog{{/link-to}}</li>
-                        <li><button {{action "show_get_in_touch"}}>Contact</button></li>
                     {{else}}
                         <li class="close-btn"><button class="icon-close" {{action "close_get_in_touch"}}>Close</button></li>
                     {{/if}}

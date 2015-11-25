@@ -64,7 +64,46 @@ header.global {
                 font-size: 50px;
                 margin-left: -25px;
                 margin-top: -25px;
+                transition: margin-top 0.3s ease-out;
             } 
+        }
+
+        span {
+            position: absolute;
+            opacity: 0;
+            width: 100%;
+            text-align: center;
+            color: $white;
+            line-height: 1.2;
+            transition: opacity 0.3s ease-out 0.3s;
+
+            &.company-name {
+                font-family: 'FreightTextLt';
+                font-size: 34px;
+                bottom: 40px;
+            }
+
+            &.company-description {
+                font-family: "AvenirNextBold";
+                font-size: 11px;
+                bottom: 30px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                color: rgba(255, 255, 255, 0.7);
+            }
+        }
+
+        
+        &:hover {
+            @media only screen and (min-width: $largeScreen + px) {        
+                &:before {
+                    margin-top: -50px;
+                }
+
+                span {
+                    opacity: 1;
+                }
+            }
         }
     }
 
@@ -110,6 +149,16 @@ header.global {
                     font-family: 'AvenirNextMed';
                     @include fontSize(13);
                     color: $titleColor;
+                }
+
+                &:before {
+                    right: -20px;
+                    position: absolute;
+                    top: 9px;
+                    transform: rotate(90deg);
+                    color: $red;
+                    font-weight: 600;
+                    font-size: 12px;
                 }
             }
 
