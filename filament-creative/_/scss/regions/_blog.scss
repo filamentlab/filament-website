@@ -2,14 +2,33 @@
     overflow: scroll;
 
     .bg {
-        background: url('/assets/images/hero-trev-blog.jpg') bottom center no-repeat;
-        background-size: cover;        
+
+    }
+
+    #image-array {
+        background-color: #ccc;
         position: absolute;
         height: 100%;
         width: 50%;
-        bottom: 0;
-        left: 0;
         top: 0;
+        left: 0;
+        bottom: 0;
+        right: 50%;
+        display: block;
+
+        li {
+            position: absolute;
+            display: none;
+            height: 100%;
+            width: 100%;
+            bottom: 0;
+            left: 0;
+            top: 0;
+
+            &:first-child {
+                display: block;
+            }
+        }
     }
 }
 
@@ -50,7 +69,7 @@
 
         @media only screen and (min-width: $smallScreen + px ) {
             padding: 70px 50px 40px 0;
-        } 
+        }
 
         @media only screen and (min-width: $mediumScreen + px ) {
 
@@ -59,8 +78,8 @@
                 &:after {
                     left: -50px;
                 }
-            }            
-        } 
+            }
+        }
 
         @media only screen and (min-width: $largeScreen + px ) {
             padding: 70px 70px 40px 0;
@@ -84,7 +103,7 @@
 
         @media only screen and (max-width: $smallScreen + px) {
             font-size: 12px;
-        }   
+        }
     }
 }
 
@@ -156,7 +175,7 @@
 
     .bg {
         background: url('/assets/images/hero-trev-blog.jpg') bottom center no-repeat;
-        background-size: cover;        
+        background-size: cover;
         position: absolute;
         height: 200px;
         width: 100%;
@@ -189,7 +208,7 @@
         margin-bottom: 15px;
 
         @media only screen and (max-width: $smallScreen + px) {
-            font-size: 34px;    
+            font-size: 34px;
         }
 
         @media only screen and (min-width: $smallScreen + px) {
@@ -200,7 +219,7 @@
     .intro-lg {
 
         @media only screen and (max-width: $smallScreen + px) {
-            font-size: 16px;    
+            font-size: 16px;
         }
 
         @media only screen and (min-width: $largeScreen + px) {
