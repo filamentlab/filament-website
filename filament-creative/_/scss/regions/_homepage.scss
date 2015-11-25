@@ -116,3 +116,69 @@
         }
     }
 }
+
+.homepage-case-study-nav {
+    position: absolute;
+    bottom: 0px;
+    height: 280px;
+    width: 100%;
+
+    .homepage-fitstar-nav {
+        position: relative;
+        height: 100%;
+        width: 50%;
+        left: 25%;
+
+        .nav-prev,
+        .nav-next {
+            @extend .circle;
+            background: rgba(0, 0, 0, 0.3);
+            height: 35px;
+            width: 35px;
+            border-radius: 50%;
+            border: 3px solid $white;
+            position: absolute;
+            bottom: 105px;
+
+            &:before {
+                position: absolute;
+                color: #fff;
+                font-size: 10px;
+                font-weight: 600;
+                left: 12px;
+                top: 9px;
+                transform: rotate(180deg);
+            }
+        }
+
+        .nav-prev {
+            left: 0;
+
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+
+        .nav-next {
+            right: 0;
+            background: $white;
+            border: 3px solid $green;
+
+            &:before {
+                transform: rotate(0);
+                color: $green;
+            }
+        }
+
+        .screenshot {
+            height: 217px;
+            width: 409px;
+            background: url('/assets/images/fitstar-device-preview.png') bottom center no-repeat;
+            background-size: cover;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -204px;
+        }
+    }
+}
