@@ -133,21 +133,29 @@
         .nav-next {
             @extend .circle;
             background: rgba(0, 0, 0, 0.3);
-            height: 35px;
-            width: 35px;
+            height: 36px;
+            width: 36px;
             border-radius: 50%;
             border: 3px solid $white;
             position: absolute;
-            bottom: 105px;
+            top: 50%;
+            margin-top: -18px;
 
             &:before {
                 position: absolute;
                 color: #fff;
                 font-size: 10px;
                 font-weight: 600;
-                left: 12px;
-                top: 9px;
+                width: 36px;
+                height: 36px;
+                line-height: 37px;
+                text-align: center;
                 transform: rotate(180deg);
+                opacity: 1;
+                left: 50%;
+                top: 50%;
+                margin: -18px 0 0 -18px;
+                text-indent: 2px;
             }
         }
 
@@ -161,12 +169,28 @@
 
         .nav-next {
             right: 0;
-            background: $white;
+            background: $white center center no-repeat;
             border: 3px solid $green;
+            margin-right: -18px;
+            @include trans(background 1s ease, height 1s ease, width 1s ease, margin 1s ease, border 1s ease);
 
             &:before {
                 transform: rotate(0);
                 color: $green;
+            }
+
+            &:hover {
+                margin-top: -53px;
+                margin-right: -53px;
+                height: 106px;
+                width: 106px;
+                border: 3px solid transparent;
+                // background: url(http://placekitten.com/g/210/210) center center no-repeat $white;
+                background: url('/assets/images/nav-merch-thumbnail.png') center center no-repeat;
+
+                &:before {
+                    opacity: 0;
+                }
             }
         }
 
@@ -179,6 +203,14 @@
             bottom: 0;
             left: 50%;
             margin-left: -204px;
+        }
+
+        .zeta {
+            position: absolute;
+            right: -110px;
+            top: 50%;
+            margin-top: -10px;
+            opacity: 0.7;
         }
     }
 }
