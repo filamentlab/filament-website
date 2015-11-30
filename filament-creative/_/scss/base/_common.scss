@@ -55,7 +55,6 @@ embed {
 }
 
 body {
-    overflow: hidden;
 
     &.blog-first,
     &.blog-second {
@@ -64,10 +63,6 @@ body {
 
     &.get-in-touch-active {
         overflow: visible;
-
-        @media only screen and (min-width: $mediumScreen + px) {
-            overflow: hidden;
-        }
     }
 }
 
@@ -122,38 +117,6 @@ body {
     }
 }
 
-.spacer {
-    @include prop(margin, 0, 10);
-    border: 2px solid $blueGreyDark;
-    display: inline-block;
-    border-radius: 3px;
-    height: 6px;
-    width: 6px;
-}
-
-.only-desktop {
-    display: none;
-
-    @media only screen and (min-width: $mediumScreen + px) {
-        display: block;
-    }
-}
-
-.only-mobile-inline {
-    display: inline-block;
-
-    @media only screen and (min-width: $mediumScreen + px) {
-        display: none;
-    }
-}
-
-.only-mobile {
-    display: block;
-
-    @media only screen and (min-width: $mediumScreen + px) {
-        display: none;
-    }
-}
 
 //----------------------------------------------------------------
 //  Hero
@@ -166,7 +129,6 @@ body {
 //----------------------------------------------------------------
 //  Ember
 //----------------------------------------------------------------
-
 .liquid-container {
     position: absolute;
     @include pre(width, 100%);
@@ -194,28 +156,38 @@ body {
     }
 }
 
+
 //----------------------------------------------------------------
 //  Backgrounds & Containers
 //----------------------------------------------------------------
-@include bgColor("white", $white);
-@include bgColor("black", $black);
-
-@include bgColor("red", $red);
-@include bgColor("tealLight", $tealLight);
-@include bgColor("green", $green);
-@include bgColor("forestDark", $forestDark);
-
-section {
-
-}
-
 .bg-white {
     background-color: $white;
+}
+
+.bg-black {
+    background-color: $black;
+}
+
+.bg-red {
+    background-color: $red;
+}
+
+.bg-tealLight {
+    background-color: $tealLight;
+}
+
+.bg-green {
+    background-color: $green;
+}
+
+.bg-forestDark {
+    background-color: $forestDark;
 }
 
 .bg-blueGreyLight {
     background-color: $blueGreyLight;
 }
+
 
 //----------------------------------------------------------------
 //  Borders
@@ -266,6 +238,7 @@ section {
 @include borderColor("tealLight", $tealLight);
 @include borderColor("green", $green);
 @include borderColor("forestDark", $forestDark);
+
 
 .br-greenLightest {
     position: relative;
