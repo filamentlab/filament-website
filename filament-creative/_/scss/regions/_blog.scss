@@ -6,27 +6,31 @@
     }
 
     #image-array {
-        background-color: #ccc;
-        position: absolute;
-        height: 100%;
-        width: 50%;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 50%;
-        display: block;
+        display: none;
 
-        li {
+        @media only screen and (min-width: $largeScreen + px) {
+            background-color: #ccc;
             position: absolute;
-            display: none;
             height: 100%;
-            width: 100%;
-            bottom: 0;
-            left: 0;
+            width: 50%;
             top: 0;
+            left: 0;
+            bottom: 0;
+            right: 50%;
+            display: block;
 
-            &:first-child {
-                display: block;
+            li {
+                position: absolute;
+                display: none;
+                height: 100%;
+                width: 100%;
+                bottom: 0;
+                left: 0;
+                top: 0;
+
+                &:first-child {
+                    display: block;
+                }
             }
         }
     }
@@ -38,23 +42,17 @@
     height: 100vh;
 
     .blog-list {
-        padding: 0 0 0 10px;
-        background: #fff;
-
-        @media only screen and (min-width: $smallScreen + px ) {
-            padding: 0 0 0 20px;
-        }
-
-        @media only screen and (min-width: $mediumScreen + px ) {
+        @media only screen and (min-width: $largeScreen + px ) {
             padding: 170px 0 0 25px;
         }
     }
 
     li {
         padding: 20px 0 60px 0;
-        background-color: #fff;
         position: relative;
         margin-bottom: 0;
+        background: #fff url('/assets/images/hero-trev-blog.jpg') left center no-repeat;
+        background-size: 30% 100%;
 
         &:after {
             @include trans(left 0.3s ease);
@@ -69,20 +67,17 @@
 
         @media only screen and (min-width: $smallScreen + px ) {
             padding: 70px 50px 40px 0;
-        }
-
-        @media only screen and (min-width: $mediumScreen + px ) {
-
-            &:hover {
-
-                &:after {
-                    left: -50px;
-                }
-            }
+            padding-left: 30%;
         }
 
         @media only screen and (min-width: $largeScreen + px ) {
             padding: 70px 70px 40px 0;
+            background: transparent;
+            padding-left: 52%;
+
+            &:after {
+                left: 52%;
+            }
         }
 
         a.ember-view {
@@ -147,11 +142,8 @@
         }
 
         .image-wrap {
-            position: absolute;
-            height: 50px;
-            width: 50px;
-            left: 0;
-            top: 0;
+            height: 39px;
+            width: 39px;
         }
     }
 }
@@ -230,6 +222,53 @@
 
 .content {
     padding: 70px 0;
+
+    .nav-row {
+      position: relative;
+    }
+
+    .icon-arrow-left,
+    .icon-arrow-right {
+      @extend h6;
+      position: absolute;
+      color: $yellowDark;
+
+      &:before {
+        font-size: 18px;
+        position: absolute;
+        top: -3px;
+      }
+
+      &:after {
+        position: absolute;
+        content: '';
+        height: 40px;
+        width: 40px;
+        border: 3px solid $yellowDark;
+        border-radius: 20px;
+        left: 0;
+        top: -10px;
+        opacity: 0;
+      }
+    }
+
+    .icon-arrow-left {
+      padding-left: 15px;
+      left: 0;
+
+      &:before {
+        left: 0;
+      }
+    }
+
+    .icon-arrow-right {
+      padding-right: 15px;
+      right: 0;
+
+      &:before {
+        right: 0;
+      }
+    }
 
     .break {
         @include radius(8);

@@ -75,7 +75,7 @@ header.global {
             text-align: center;
             color: $white;
             line-height: 1.2;
-            transition: opacity 0.3s ease-out 0.3s;
+            transition: opacity 0.3s ease-out 0s;
 
             &.company-name {
                 font-family: 'FreightTextLt';
@@ -101,6 +101,7 @@ header.global {
                 }
 
                 span {
+                    transition: opacity 0.3s ease-out 0.3s;
                     opacity: 1;
                 }
             }
