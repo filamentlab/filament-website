@@ -129,74 +129,26 @@
         width: 50%;
         left: 25%;
 
-        .icon-arrow-left,
-        .icon-arrow-right {
-            @extend .circle;
-            background: rgba(0, 0, 0, 0.3);
-            height: 36px;
-            width: 36px;
-            border-radius: 50%;
-            border: 3px solid $white;
-            position: absolute;
-            top: 50%;
-            margin-top: -18px;
-
-            &:before {
-                position: absolute;
-                color: #fff;
-                font-size: 10px;
-                font-weight: 600;
-                width: 36px;
-                height: 36px;
-                line-height: 37px;
-                text-align: center;
-                transform: rotate(180deg);
-                opacity: 1;
-                left: 50%;
-                top: 50%;
-                margin: -18px 0 0 -18px;
-                text-indent: 2px;
-            }
-        }
-
         .nav-prev {
-            .icon-arrow-right {
+            .icon-arrow-left {
                 left: 100px;
                 background: rgba(0, 0, 0, 0.3) center center no-repeat;
                 margin-left: -18px;
                 @include trans(background 0.5s ease-out, height 0.5s ease-out, width 0.5s ease-out, margin 0.5s ease-out, border 0.5s ease-out);
-
-                &:before {
-                    transform: rotate(180deg);
-                }
             }
 
             .zeta {
-                opacity: 0;
-                position: absolute;
                 left: -10px;
-                top: 50%;
-                margin-top: -10px;
-                @include trans(opacity 0.3s ease-out 0s);
                 color: $white;
             }
 
             &:hover {
-                .icon-arrow-right {
-                    margin-top: -53px;
+                .icon-arrow-left {
                     margin-left: -53px;
-                    height: 106px;
-                    width: 106px;
-                    border: 3px solid transparent;
                     background: url('/assets/images/nav-merch-thumbnail.png') center center no-repeat;
-
-                    &:before {
-                        opacity: 0;
-                    }
                 }
 
                 .zeta {
-                    @include trans(opacity 0.3s ease-out 0.5s);
                     opacity: 1;
                 }   
             }
@@ -217,31 +169,18 @@
             }
 
             .zeta {
-                opacity: 0;
-                position: absolute;
                 right: -10px;
                 text-align: right;
-                top: 50%;
-                margin-top: -10px;
-                @include trans(opacity 0.3s ease-out 0s);
             }
 
             &:hover {
                 .icon-arrow-right {
-                    margin-top: -53px;
-                    margin-right: -53px;
-                    height: 106px;
-                    width: 106px;
                     border: 3px solid transparent;
+                    margin-right: -53px;
                     background: url('/assets/images/nav-merch-thumbnail.png') center center no-repeat;
-
-                    &:before {
-                        opacity: 0;
-                    }
                 }
 
                 .zeta {
-                    @include trans(opacity 0.3s ease-out 0.5s);
                     opacity: 0.7;
                 }
             }
