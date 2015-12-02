@@ -128,18 +128,6 @@
 
 
 //----------------------------------------------------------------
-//	Background Color
-//----------------------------------------------------------------
-// Just keeps the _common.scss file a little cleaner.
-@mixin bgColor($colorName, $color) {
-
-	.bg-#{$colorName} {
-	    background-color: $color;
-	}
-}
-
-
-//----------------------------------------------------------------
 //	Property & Values
 //----------------------------------------------------------------
 //  Written as: @include prop(top, 10); OR @include prop(margin, 20, 10); || Four values max.
