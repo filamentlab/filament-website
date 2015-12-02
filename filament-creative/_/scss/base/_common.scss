@@ -3,7 +3,7 @@
 //----------------------------------------------------------------
 .clearfix,
 %clearfix {
-    
+
     &:after {
         content: "";
         width: 100%;
@@ -48,8 +48,8 @@ a {
     outline: none;
 }
 
-iframe, 
-object, 
+iframe,
+object,
 embed {
     max-width: 100%;
 }
@@ -64,6 +64,30 @@ body {
     &.get-in-touch-active {
         overflow: visible;
     }
+}
+
+figure {
+
+  img {
+    margin-bottom: 10px;
+  }
+
+  figcaption {
+    @extend h6;
+    padding-left: 15px;
+    position: relative;
+
+    &:before {
+      background-color: $red;
+      position: absolute;
+      border-radius: 3px;
+      content: '';
+      height: 5px;
+      width: 5px;
+      top: 3px;
+      left: 0;
+    }
+  }
 }
 
 //----------------------------------------------------------------
@@ -242,7 +266,7 @@ body {
 
 .br-greenLightest {
     position: relative;
-    
+
     &:before {
         content: "";
         display: block;
