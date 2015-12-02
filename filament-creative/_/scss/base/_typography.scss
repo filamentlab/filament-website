@@ -164,9 +164,6 @@ strong {
     font-family: "AvenirNextMed";
 }
 
-p {
-}
-
 p,
 li {
     @include fontSize(16);
@@ -193,13 +190,13 @@ li {
         line-height: 1.5;
     }
 
-    span.number-sm {
+    .number-sm {
         font-family: 'AvenirNextDemi';
         @include fontSize(35);
         line-height: 1.3;
     }
 
-    span.number-lg {
+    .number-lg {
         @include prop(letter-spacing, -4);
         font-family: 'AvenirNextDemi';
         @include fontSize(120);
@@ -216,7 +213,7 @@ li {
     }
 }
 
-a.tag {
+.tag {
     font-family: "AvenirNextBold";
     border: 1px solid $yellowDark;
     text-transform: uppercase;
@@ -257,7 +254,7 @@ ul {
 
             &:before {
                 @include radius(3);
-                background-color: $charcoalLight;
+                background: $charcoalLight;
                 position: absolute;
                 content: '';
                 height: 6px;

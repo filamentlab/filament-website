@@ -2,7 +2,7 @@ import Ember from 'ember';
 import config from './config/environment';
 
 var Router = Ember.Router.extend({
-  location: config.locationType
+    location: config.locationType
 });
 
 Router.map(function() {
@@ -14,7 +14,8 @@ Router.map(function() {
     // this.route('get-in-touch', {path: '/get-in-touch'});
     this.route('work', {path: '/work'});
     this.route('about', {path: '/about'});
-    this.route('scalar-case-study', {path:'/scalar-case-study'});
+    this.route('case-study-scalar', {path:'/scalar-case-study'});
+    this.route('case-study-fitstar', {path:'/fitstar-case-study'});
 
     this.route('page-not-found', { path: '/*wildcard' });
     this.route('style-guide', { path: '/style-guide' });
@@ -23,18 +24,18 @@ Router.map(function() {
 export default Router;
 
 Ember.Route.reopen({
-  activate: function() {
-    var cssClass = this.toCssClass();
-    // you probably don't need the application class
-    // to be added to the body
-    if (cssClass !== 'application') {
-      Ember.$('body').addClass(cssClass);
+    activate: function() {
+        var cssClass = this.toCssClass();
+        // you probably don't need the application class
+        // to be added to the body
+        if (cssClass !== 'application') {
+            Ember.$('body').addClass(cssClass);
+        }
+    },
+    deactivate: function() {
+        Ember.$('body').removeClass(this.toCssClass());
+    },
+        toCssClass: function() {
+        return this.routeName.replace(/\./g, '-').dasherize();
     }
-  },
-  deactivate: function() {
-    Ember.$('body').removeClass(this.toCssClass());
-  },
-  toCssClass: function() {
-    return this.routeName.replace(/\./g, '-').dasherize();
-  }
 });

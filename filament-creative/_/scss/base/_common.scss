@@ -66,6 +66,7 @@ body {
     }
 }
 
+
 //----------------------------------------------------------------
 //  Helper Classes
 //----------------------------------------------------------------
@@ -259,6 +260,53 @@ body {
 
         @media only screen and (min-width: $largeScreen + px) {
             width: 80%;
+        }
+    }
+}
+
+
+//----------------------------------------------------------------
+//  Underlined List
+//----------------------------------------------------------------
+.underlined-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+        color: $charcoalLight;
+        margin: 0;
+        padding: 14px 0;
+        line-height: 1.7;
+        border-bottom: 1px solid $blueGreyDark;
+        list-style: none;
+
+        &:last-child {
+            border-bottom: none;
+        }
+    }
+}
+
+
+//----------------------------------------------------------------
+//  Sideline With Icon
+//----------------------------------------------------------------
+.sideline-with-icon {
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 135px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+    }
+
+    .column {
+
+        &:first-child {
+            padding-left: 180px;
         }
     }
 }
