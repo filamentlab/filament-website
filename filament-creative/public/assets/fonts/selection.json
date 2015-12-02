@@ -8,10 +8,10 @@
 				],
 				"attrs": [],
 				"isMulticolor": false,
-				"grid": 0,
 				"tags": [
 					"empty-circle"
-				]
+				],
+				"grid": 0
 			},
 			"attrs": [],
 			"properties": {
@@ -22,7 +22,7 @@
 				"name": "active-nav"
 			},
 			"setIdx": 0,
-			"setId": 9,
+			"setId": 3,
 			"iconIdx": 0
 		},
 		{
@@ -45,9 +45,9 @@
 				"code": 59393,
 				"name": "medium"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 0
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 1
 		},
 		{
 			"icon": {
@@ -69,9 +69,9 @@
 				"code": 58885,
 				"name": "instagram"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 1
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 2
 		},
 		{
 			"icon": {
@@ -104,9 +104,9 @@
 				"code": 58884,
 				"name": "down-arrow"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 2
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 3
 		},
 		{
 			"icon": {
@@ -133,9 +133,9 @@
 				"code": 58881,
 				"name": "checkmark"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 3
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 4
 		},
 		{
 			"icon": {
@@ -161,9 +161,34 @@
 				"code": 58882,
 				"name": "circle"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 4
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 5
+		},
+		{
+			"icon": {
+				"paths": [
+					"M439.9 1000.505l-413.49-494.941v12.873l413.49-494.941-15.409-12.873-418.867 501.378 418.867 501.378 15.409-12.873z"
+				],
+				"width": 442,
+				"attrs": [],
+				"isMulticolor": false,
+				"tags": [
+					"icon-arrow-left"
+				],
+				"grid": 0
+			},
+			"attrs": [],
+			"properties": {
+				"order": 1,
+				"id": 2,
+				"prevSize": 32,
+				"code": 59648,
+				"name": "arrow-left"
+			},
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 6
 		},
 		{
 			"icon": {
@@ -186,9 +211,9 @@
 				"code": 59392,
 				"name": "arrow-right"
 			},
-			"setIdx": 1,
-			"setId": 8,
-			"iconIdx": 5
+			"setIdx": 0,
+			"setId": 3,
+			"iconIdx": 7
 		},
 		{
 			"icon": {
@@ -215,8 +240,8 @@
 				"ligatures": "github, brand40",
 				"name": "github"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 0
 		},
 		{
@@ -243,8 +268,8 @@
 				"code": 58880,
 				"name": "filament-logo"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 1
 		},
 		{
@@ -271,8 +296,8 @@
 				"ligatures": "dribbble, brand29",
 				"name": "dribbble"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 2
 		},
 		{
@@ -300,8 +325,8 @@
 				"ligatures": "arrow-down2, down2",
 				"name": "arrow-down2"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 3
 		},
 		{
@@ -329,8 +354,8 @@
 				"ligatures": "twitter, brand11",
 				"name": "twitter"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 4
 		},
 		{
@@ -359,8 +384,8 @@
 				"ligatures": "linkedin2, brand64",
 				"name": "linkedin2"
 			},
-			"setIdx": 2,
-			"setId": 7,
+			"setIdx": 1,
+			"setId": 2,
 			"iconIdx": 5
 		}
 	],
@@ -393,6 +418,7 @@
 			"bgColor": 16777215
 		},
 		"historySize": 100,
-		"showCodes": false
+		"showCodes": false,
+		"gridSize": 16
 	}
 }
